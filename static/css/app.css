@@ -1,0 +1,43 @@
+body {
+  background-image: url(../img/bg.jpg);
+  color: #523637;
+}
+#mainNav {
+  background-color: #a0c4ff;
+}
+.bg-faded {
+  background-color: #a0c4ff;
+}
+.footer {
+  background-color: #a0c4ff;
+}
+#mainNav .navbar-brand {
+  color: #fd9a7e;
+}
+#mainNav .navbar-nav .nav-item .nav-link {
+  color: #fd9a7e;
+  font-weight: 800;
+}
+.btn-primary {
+  background-color: #ffc6ff;
+  border-color: #ffc6ff;
+  color: #888;
+}
+.cta {
+  background-color: rgb(255, 191, 255, 0.6);
+}
+.site-heading .site-heading-lower {
+  font-size: 2rem;
+  color: #c43d16;
+  font-weight: 500;
+}
+.site-heading .site-heading-upper {
+  display: block;
+  font-size: 4rem;
+  font-weight: 800;
+  color: #fd9a7e;
+}
+.navbar-dark .navbar-toggler {
+  color: rgb(255, 153, 126);
+  border-color: rgb(255, 153, 126);
+}
