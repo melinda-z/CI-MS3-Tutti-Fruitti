@@ -22,5 +22,40 @@ def home():
     return render_template("home.html")
 
 
+@app.route("/about")
+def about():
+    return render_template("about.html")
+
+
+@app.route("/register")
+def register():
+    return render_template("register.html")
+
+
+@app.route("/login")
+def login():
+    return render_template("login.html")
+
+
+@app.route("/recipes")
+def recipes():
+    return render_template("recipes.html")
+
+
+@app.route("/profile")
+def profile():
+    return render_template("profile.html")
+
+
+@app.route("/utensils")
+def utensils():
+    return render_template("utensils.html")
+
+
+@app.route("/logout")
+def logout():
+    return render_template("logout.html")
+
+
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"), port=int(os.environ.get("PORT")), debug=True)

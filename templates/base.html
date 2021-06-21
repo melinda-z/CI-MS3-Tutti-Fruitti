@@ -41,7 +41,7 @@
       <div class="container">
         <a
           class="navbar-brand text-uppercase fw-bold d-lg-none"
-          href="index.html"
+          href="home.html"
           >Tutti Fruitti</a
         >
         <button
@@ -58,18 +58,48 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav mx-auto">
             <li class="nav-item px-lg-4">
-              <a class="nav-link text-uppercase" href="index.html">Home</a>
+              <a class="nav-link text-uppercase" href="{{ url_for('home') }}"
+                >Home</a
+              >
             </li>
             <li class="nav-item px-lg-4">
-              <a class="nav-link text-uppercase" href="about.html">About</a>
+              <a class="nav-link text-uppercase" href="{{ url_for('about') }}"
+                >About</a
+              >
             </li>
             <li class="nav-item px-lg-4">
-              <a class="nav-link text-uppercase" href="products.html"
+              <a class="nav-link text-uppercase" href="{{ url_for('profile') }}"
+                >Profile</a
+              >
+            </li>
+            <li class="nav-item px-lg-4">
+              <a class="nav-link text-uppercase" href="{{ url_for('recipes') }}"
+                >Recipes</a
+              >
+            </li>
+            <li class="nav-item px-lg-4">
+              <a
+                class="nav-link text-uppercase"
+                href="{{ url_for('utensils') }}"
+                >Utensils</a
+              >
+            </li>
+            <li class="nav-item px-lg-4">
+              <a class="nav-link text-uppercase" href="{{ url_for('logout') }}"
+                >Log Out</a
+              >
+            </li>
+            <li class="nav-item px-lg-4">
+              <a
+                class="nav-link text-uppercase"
+                href="{{ url_for('register') }}"
                 >Register</a
               >
             </li>
             <li class="nav-item px-lg-4">
-              <a class="nav-link text-uppercase" href="store.html">LogIn</a>
+              <a class="nav-link text-uppercase" href="{{ url_for('login') }}"
+                >Log In</a
+              >
             </li>
           </ul>
         </div>
