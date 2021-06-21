@@ -12,10 +12,10 @@ body {
   background-color: #a0c4ff;
 }
 #mainNav .navbar-brand {
-  color: #fd9a7e;
+  color: #fdffb6;
 }
 #mainNav .navbar-nav .nav-item .nav-link {
-  color: #fd9a7e;
+  color: #fdffb6;
   font-weight: 800;
 }
 .btn-primary {
@@ -23,6 +23,12 @@ body {
   border-color: #ffc6ff;
   color: #888;
 }
+.btn-primary:hover {
+  color: #888;
+  background-color: #fdffb6;
+  border-color: #fdffb6;
+}
+
 .cta {
   background-color: rgb(255, 191, 255, 0.6);
 }
@@ -36,8 +42,11 @@ body {
   font-size: 4rem;
   font-weight: 800;
   color: #fd9a7e;
+  text-decoration: none;
 }
 .navbar-dark .navbar-toggler {
-  color: rgb(255, 153, 126);
-  border-color: rgb(255, 153, 126);
+  border-color: rgba(255, 255, 255, 0.5);
+}
+.text-faded {
+  color: #fdffb6;
 }
