@@ -58,7 +58,7 @@ def logout():
 
 
 @app.route("/detox")
-def title():
+def detox():
     categories = mongo.db.categories.find()
     return render_template("detox.html", categories=categories)
 
