@@ -50,3 +50,6 @@ body {
 .text-faded {
   color: #fdffb6;
 }
+.section-heading {
+  text-decoration: none;
+}
