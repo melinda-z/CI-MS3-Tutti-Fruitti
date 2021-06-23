@@ -2,6 +2,7 @@ import os
 from flask import Flask, flash, render_template, redirect, request, session, url_for
 from flask_pymongo import PyMongo
 from bson.objectid import ObjectId
+from werkzeug.security import generate_password_hash, check_password_hash
 
 if os.path.exists("env.py"):
     import env
@@ -27,7 +28,7 @@ def benefits():
     return render_template("benefits.html")
 
 
-@app.route("/register")
+@app.route("/register", methods=["GET", "POST"])
 def register():
     return render_template("register.html")
 
@@ -37,9 +38,9 @@ def login():
     return render_template("login.html")
 
 
-@app.route("/recipes")
-def recipes():
-    return render_template("recipes.html")
+@app.route("/all_recipes")
+def all_recipes():
+    return render_template("all_recipes.html")
 
 
 @app.route("/profile")
@@ -55,12 +56,6 @@ def utensils():
 @app.route("/logout")
 def logout():
     return render_template("logout.html")
-
-
-@app.route("/detox")
-def detox():
-    categories = mongo.db.categories.find()
-    return render_template("detox.html", categories=categories)
 
 
 if __name__ == "__main__":
