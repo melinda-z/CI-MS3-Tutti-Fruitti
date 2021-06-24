@@ -70,7 +70,7 @@ As a first time user:
 
 - I want to know if there is an option to register and hold an account, so I can come back anytime and add recipe if I like.
 
-- **Returning User Goals**
+**_Returning User Goals_**
 
 As a returning user:
 
@@ -84,7 +84,7 @@ As a returning user:
 
 - I want to be able to edit or delete my own recipe anytime if I want to.
 
-- **Site Owner/Admin Goals**
+**_Site Owner/Admin Goals_**
 
 As the site owner/admin:
 
@@ -105,6 +105,7 @@ Considering the nature of Smoothies, ie. "fruit" "vegetables" "summer" "ice" "co
 **_Colour Scheme_**
 
 Take from the above feeling, I decide to use below color palatte. ⬇️
+
 ![color palatte](static/documentation/MS3-palette.png)
 
 **_Typography_**
@@ -116,6 +117,7 @@ Imagery is the soul of a website, it plays an very important role of user experi
 ### **Wireframes & Mockups**
 
 The initial plan of this project is to use a bootstap template, but as the development progress, it turned out a bit messy. So I decided to ditch the original plan and start it again. You can see a photo or a hand-drawing mockup below. ⬇️
+
 ![mock-up](static/documentation/ms3-mockup.png)
 
 You can also find a balsamiq wireframe [here](static/documentation/wireframe.pdf)
