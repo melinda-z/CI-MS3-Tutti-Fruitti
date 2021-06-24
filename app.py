@@ -23,39 +23,29 @@ def home():
     return render_template("home.html")
 
 
-@app.route("/benefits")
-def benefits():
-    return render_template("benefits.html")
-
-
-@app.route("/register", methods=["GET", "POST"])
-def register():
-    return render_template("register.html")
-
-
-@app.route("/login")
-def login():
-    return render_template("login.html")
-
-
 @app.route("/all_recipes")
 def all_recipes():
     return render_template("all_recipes.html")
 
 
-@app.route("/profile")
-def profile():
-    return render_template("profile.html")
+@app.route("/my_recipes")
+def my_recipes():
+    return render_template("my_recipes.html")
 
 
-@app.route("/utensils")
-def utensils():
-    return render_template("utensils.html")
+@app.route("/log_in")
+def log_in():
+    return render_template("log_in.html")
 
 
-@app.route("/logout")
-def logout():
-    return render_template("logout.html")
+@app.route("/log_out")
+def log_out():
+    return render_template("log_out.html")
+
+
+@app.route("/register", methods=["GET", "POST"])
+def register():
+    return render_template("register.html")
 
 
 if __name__ == "__main__":

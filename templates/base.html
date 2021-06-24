@@ -29,10 +29,42 @@
       href="{{ url_for('static', filename='css/style.css') }}"
       type="text/css"
     />
+    {% block styles %} {% endblock %}
+    <title>Tutti Fruitti</title>
   </head>
-  {% block styles %} {% endblock %}
-  <title>Tutti Fruitti</title>
   <body>
+    <header>
+      <!-- main nav -->
+      <nav class="nav-extended text-shadow navbar">
+        <div class="nav-wrapper">
+          <a href="{{ url_for('home') }}" class="brand-logo">Tutti Fruitti</a>
+          <a href="#" data-target="mobile-demo" class="sidenav-trigger right"
+            ><i class="fas fa-bars"></i
+          ></a>
+          <ul class="right hide-on-med-and-down">
+            <li><a href="{{ url_for('home') }}">Home</a></li>
+            <li><a href="{{ url_for('all_recipes') }}">Recipes</a></li>
+            <li><a href="{{ url_for('my_recipes') }}">My recipes</a></li>
+            <li><a href="#">Manage Categories</a></li>
+            <li><a href="{{ url_for('log_out') }}">Log Out</a></li>
+            <li><a href="{{ url_for('log_in') }}">Log In</a></li>
+            <li><a href="{{ url_for('register') }}">Register</a></li>
+          </ul>
+        </div>
+      </nav>
+      <!-- mobile sidenav -->
+      <ul class="sidenav" id="mobile-demo">
+        <h4 class="center-align">Tutti Fruitti</h4>
+        <li><a href="{{ url_for('home') }}">Home</a></li>
+        <li><a href="{{ url_for('all_recipes') }}">Recipes</a></li>
+        <li><a href="{{ url_for('my_recipes') }}">My recipes</a></li>
+        <li><a href="#">Manage Categories</a></li>
+        <li><a href="{{ url_for('log_out') }}">Log Out</a></li>
+        <li><a href="{{ url_for('log_in') }}">Log In</a></li>
+        <li><a href="{{ url_for('register') }}">Register</a></li>
+      </ul>
+    </header>
+    {% block content %} {% endblock %}
     <!-- jQuery CDN minified-->
     <script
       src="https://code.jquery.com/jquery-3.6.0.min.js"
