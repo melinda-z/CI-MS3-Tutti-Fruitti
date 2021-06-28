@@ -1,6 +1,44 @@
+body {
+  background-image: url(../img/bg.jpg);
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+main {
+  flex: 1 0 auto;
+}
 .text-shadow {
   text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
 }
-.navbar {
+.blueberry {
   background-color: #a0c4ff;
+}
+.cakepop-icon {
+  color: #ffc6ff;
+}
+.cakepop {
+  background-color: #ffc6ff;
+}
+
+.button:hover {
+  background-color: #9bf6ff;
+}
+footer {
+  background-color: #a0c4ff;
+  padding: 20px;
+  color: honeydew;
+  text-align: center;
+  font-weight: 700;
+}
+.social {
+  font-size: 1.5rem;
+  padding: 4px;
+  color: #ffd6a5;
+}
+.social:hover {
+  color: #fdffb6;
+}
+h3 {
+  color: #bdb2ff;
+  font-weight: bold;
 }

@@ -35,7 +35,7 @@
   <body>
     <header>
       <!-- main nav -->
-      <nav class="nav-extended text-shadow navbar">
+      <nav class="nav-extended text-shadow blueberry">
         <div class="nav-wrapper">
           <a href="{{ url_for('home') }}" class="brand-logo">Tutti Fruitti</a>
           <a href="#" data-target="mobile-demo" class="sidenav-trigger right"
@@ -64,8 +64,25 @@
         <li><a href="{{ url_for('register') }}">Register</a></li>
       </ul>
     </header>
-    {% block content %} {% endblock %}
+    <main>{% block content %} {% endblock %}</main>
     <!-- jQuery CDN minified-->
+    <footer>
+      <div class="container">
+        © 2021 Melinda Zhang
+        <a
+          href="https://www.linkedin.com/in/melinda-zhang-0012301aa/"
+          target="_blank"
+          rel="noopener noreferrer"
+          ><i class="fab fa-linkedin social"></i
+        ></a>
+        <a
+          href="https://github.com/MelindaZhang2020"
+          target="_blank"
+          rel="noopener noreferrer"
+          ><i class="fab fa-github social"></i
+        ></a>
+      </div>
+    </footer>
     <script
       src="https://code.jquery.com/jquery-3.6.0.min.js"
       integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
