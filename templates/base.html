@@ -54,7 +54,9 @@
       </nav>
       <!-- mobile sidenav -->
       <ul class="sidenav" id="mobile-demo">
-        <h4 class="center-align">Tutti Fruitti</h4>
+        <h4 class="center-align">
+          <a href="{{ url_for('home') }}" class="brand-logo">Tutti Fruitti</a>
+        </h4>
         <li><a href="{{ url_for('home') }}">Home</a></li>
         <li><a href="{{ url_for('all_recipes') }}">Recipes</a></li>
         <li><a href="{{ url_for('my_recipes') }}">My recipes</a></li>

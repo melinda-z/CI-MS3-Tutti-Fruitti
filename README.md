@@ -120,7 +120,7 @@ The initial plan of this project is to use a bootstap template, but as the devel
 
 ![mock-up](static/documentation/ms3-mockup.png)
 
-You can also find a balsamiq wireframe [here](static/documentation/wireframe.pdf)
+You can also find balsamiq wireframes [here](static/documentation/wireframes.md).
 
 ## **Features**
 
