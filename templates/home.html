@@ -1,1 +1,42 @@
-{% extends "base.html" %} {% block content %} {% endblock %}
+{% extends "base.html" %} {% block content %}
+<div class="slideshow-container">
+  <div class="mySlides fade">
+    <div class="numbertext">1 / 5</div>
+    <img src="static/img/detox.jpg" />
+    <div class="text">Detox Smoothies</div>
+  </div>
+
+  <div class="mySlides fade">
+    <div class="numbertext">2 / 5</div>
+    <img src="static/img/immune-boost.jpg" />
+    <div class="text">Immune-boost Smoothies</div>
+  </div>
+
+  <div class="mySlides fade">
+    <div class="numbertext">3 / 5</div>
+    <img src="static/img/superfood.jpg" />
+    <div class="text">Superfood Smoothies</div>
+  </div>
+
+  <div class="mySlides fade">
+    <div class="numbertext">4 / 5</div>
+    <img src="static/img/weight-loss.jpg" />
+    <div class="text">Weight-loss Smoothies</div>
+  </div>
+
+  <div class="mySlides fade">
+    <div class="numbertext">5 / 5</div>
+    <img src="static/img/kiddylicious.jpg" />
+    <div class="text">Kiddylicious Smoothies</div>
+  </div>
+</div>
+<br />
+
+<div style="text-align: center">
+  <span class="dot"></span>
+  <span class="dot"></span>
+  <span class="dot"></span>
+  <span class="dot"></span>
+  <span class="dot"></span>
+</div>
+{% endblock %}
