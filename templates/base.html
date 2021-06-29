@@ -44,6 +44,7 @@
           <ul class="right hide-on-med-and-down">
             <li><a href="{{ url_for('home') }}">Home</a></li>
             <li><a href="{{ url_for('all_recipes') }}">Recipes</a></li>
+            {% if session.user %}
             <li>
               <a href="{{ url_for('my_recipes',username=session['user']) }}"
                 >My recipes</a
@@ -51,8 +52,10 @@
             </li>
             <li><a href="#">Manage Categories</a></li>
             <li><a href="{{ url_for('log_out') }}">Log Out</a></li>
+            {% else %}
             <li><a href="{{ url_for('log_in') }}">Log In</a></li>
             <li><a href="{{ url_for('register') }}">Register</a></li>
+            {% endif %}
           </ul>
         </div>
       </nav>
@@ -63,6 +66,7 @@
         </h4>
         <li><a href="{{ url_for('home') }}">Home</a></li>
         <li><a href="{{ url_for('all_recipes') }}">Recipes</a></li>
+        {% if session.user %}
         <li>
           <a href="{{ url_for('my_recipes', username=session['user']) }}"
             >My recipes</a
@@ -70,8 +74,10 @@
         </li>
         <li><a href="#">Manage Categories</a></li>
         <li><a href="{{ url_for('log_out') }}">Log Out</a></li>
+        {% else %}
         <li><a href="{{ url_for('log_in') }}">Log In</a></li>
         <li><a href="{{ url_for('register') }}">Register</a></li>
+        {% endif %}
       </ul>
     </header>
     <section>

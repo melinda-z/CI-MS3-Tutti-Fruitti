@@ -32,7 +32,11 @@ def all_recipes():
 def my_recipes(username):
     # grab the session user's username from db
     username = mongo.db.users.find_one({"username": session["user"]})["username"]
-    return render_template("my_recipes.html", username=username)
+
+    if session["user"]:
+        return render_template("my_recipes.html", username=username)
+
+    return redirect(url_for("log_in"))
 
 
 @app.route("/log_in", methods=["GET", "POST"])
@@ -49,7 +53,11 @@ def log_in():
                 existing_user["password"], request.form.get("password")
             ):
                 session["user"] = request.form.get("username").lower()
-                flash("Welcome back, {}!".format(request.form.get("username")))
+                flash(
+                    "Welcome back, {}!".format(
+                        request.form.get("username").capitalize()
+                    )
+                )
                 return redirect(url_for("my_recipes", username=session["user"]))
 
             else:
@@ -67,7 +75,10 @@ def log_in():
 
 @app.route("/log_out")
 def log_out():
-    return render_template("log_out.html")
+    # remove user from session cookies
+    flash("You have been logged out")
+    session.pop("user")
+    return redirect(url_for("log_in"))
 
 
 @app.route("/register", methods=["GET", "POST"])
