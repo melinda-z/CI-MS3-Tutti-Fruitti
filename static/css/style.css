@@ -39,6 +39,9 @@ footer {
   color: #fdffb6;
 }
 h3 {
-  color: #bdb2ff;
+  color: #4db6ac;
   font-weight: bold;
+}
+.flashes h4 {
+  line-height: 2;
 }
