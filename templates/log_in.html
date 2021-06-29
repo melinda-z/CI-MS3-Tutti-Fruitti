@@ -4,13 +4,13 @@
   <form
     class="col s12 m8 offset-m2"
     method="POST"
-    action="{{ url_for('register') }}"
+    action="{{ url_for('log_in') }}"
   >
     <div class="card-panel blueberry">
       <!-- username -->
       <div class="row">
         <div class="input-field col s12">
-          <i class="fas fa-user-plus prefix cakepop-icon"></i>
+          <i class="fas fa-user-cog prefix cakepop-icon"></i>
           <input id="username" name="username" type="text" class="validate" />
           <label for="username">Username</label>
         </div>
@@ -28,7 +28,7 @@
           <label for="password">Password</label>
         </div>
       </div>
-      <!-- register -->
+      <!-- log in -->
       <div class="row">
         <button
           type="submit"
