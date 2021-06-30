@@ -40,7 +40,7 @@ The project goal is to provide a platform for users who love smoothies to explor
 
 ### **Target Audience**
 
-Our target audience are anyone who is interested in health living lifestyle, who enjoys fruit and veg, or just simply exploring new experiences.
+Our target audience are anyone who interested in healthy living, who enjoys fruit and veg, or just simply exploring new experiences.
 
 ### **Uers Stories**
 
@@ -116,11 +116,19 @@ Imagery is the soul of a website, it plays an very important role of user experi
 
 ### **Wireframes & Mockups**
 
+**_Mockups_**
+
 The initial plan of this project is to use a bootstap template, but as the development progress, it turned out a bit messy. So I decided to ditch the original plan and start it again. You can see a photo or a hand-drawing mockup below. ⬇️
 
 ![mock-up](static/documentation/ms3-mockup.png)
 
-You can also find balsamiq wireframes [here](static/documentation/wireframes.md).
+**_Wireframes_**
+
+All wireframes were designed base on mobile first principle, along side with a tablet and destop view. You can see all wireframes [here](static/documentation/wireframes.md).
+
+**_Database Schema_**
+
+![Database Schema](static/documentation/ms3-database-schema.png)
 
 ## **Features**
 
