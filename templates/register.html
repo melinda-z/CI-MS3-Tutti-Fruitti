@@ -6,7 +6,7 @@
     method="POST"
     action="{{ url_for('register') }}"
   >
-    <div class="card-panel blueberry">
+    <div class="card-panel card-color">
       <!-- username -->
       <div class="row">
         <div class="input-field col s12">
@@ -45,16 +45,18 @@
       <div class="row">
         <button
           type="submit"
-          class="col s6 offset-m3 btn-large text-shadow cakepop button"
+          class="col s6 offset-m3 btn-large text-shadow button"
         >
           Register <i class="fas fa-sign-in-alt"></i>
         </button>
       </div>
-      <div class="row center-align">
-        <span>Already Have An Account?</span>
-        <span>Log In <a href="{{ url_for('log_in') }}">Here!</a></span>
-      </div>
     </div>
   </form>
+  <div class="row center-align">
+    <p>
+      Already Have An Account? Log In
+      <a href="{{ url_for('log_in') }}">Here!</a>
+    </p>
+  </div>
 </div>
 {% endblock %}

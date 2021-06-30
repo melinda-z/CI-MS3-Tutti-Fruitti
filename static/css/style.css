@@ -26,22 +26,24 @@ nav .nav-wrapper {
   background-color: #a0c4ff;
 }
 .cakepop-icon {
-  color: #ffc6ff;
+  color: rgb(170, 27, 27);
 }
 .cakepop {
   background-color: #ffc6ff;
 }
-
+.card-color {
+  background-color: RGB(253, 255, 182, 0.5);
+}
 .button:hover {
   background-color: #9bf6ff;
 }
 footer {
-  background-color: #a0c4ff;
   padding: 20px;
   color: honeydew;
   text-align: center;
   font-weight: 700;
 }
+
 .social {
   font-size: 1.5rem;
   padding: 4px;
@@ -59,7 +61,7 @@ h3 {
 }
 .fact {
   font-size: 1.5rem;
-  background: RGBA(253, 255, 182, 0.4);
+  background: RGBA(254, 214, 57, 0.3);
   color: darkgreen;
 }
 /* home page grid images */
