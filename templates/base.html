@@ -37,8 +37,12 @@
       <!-- main nav -->
       <nav class="nav-extended text-shadow blueberry">
         <div class="nav-wrapper">
-          <a href="{{ url_for('home') }}" class="brand-logo">Tutti Fruitti</a>
-          <a href="#" data-target="mobile-demo" class="sidenav-trigger right"
+          <img id="logo" src="static/img/logo.png" alt="smoothie-icon" />
+          <a href="{{ url_for('home') }}" class="brand-logo">Tutti Fruitti </a>
+          <a
+            href="{{ url_for('home') }}"
+            data-target="mobile-demo"
+            class="sidenav-trigger right"
             ><i class="fas fa-bars"></i
           ></a>
           <ul class="right hide-on-med-and-down">
