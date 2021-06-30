@@ -54,6 +54,7 @@ h3 {
   background: RGBA(253, 255, 182, 0.4);
   color: darkgreen;
 }
+/* home page grid images */
 .row {
   display: flex;
   flex-wrap: wrap;
@@ -79,6 +80,10 @@ h3 {
     flex: 50%;
     max-width: 50%;
   }
+  #column-3,
+  #column-4 {
+    display: none;
+  }
 }
 
 /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
@@ -86,5 +91,10 @@ h3 {
   .column {
     flex: 100%;
     max-width: 100%;
+  }
+  #column-2,
+  #column-3,
+  #column-4 {
+    display: none;
   }
 }
