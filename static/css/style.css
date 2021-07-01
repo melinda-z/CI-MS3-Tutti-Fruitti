@@ -1,3 +1,4 @@
+/* Utility */
 * {
   box-sizing: border-box;
 }
@@ -10,32 +11,6 @@ body {
 }
 main {
   flex: 1 0 auto;
-}
-
-nav .nav-wrapper {
-  padding-top: 20px;
-}
-#logo {
-  width: 50px;
-  height: 60px;
-}
-.text-shadow {
-  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
-}
-.blueberry {
-  background-color: #a0c4ff;
-}
-.cakepop-icon {
-  color: rgb(170, 27, 27);
-}
-.cakepop {
-  background-color: #ffc6ff;
-}
-.card-color {
-  background-color: RGB(253, 255, 182, 0.5);
-}
-.button:hover {
-  background-color: #9bf6ff;
 }
 footer {
   padding: 20px;
@@ -56,14 +31,44 @@ h3 {
   color: #4db6ac;
   font-weight: bold;
 }
+h5 {
+  color: #fdffb6;
+  font-weight: 500;
+}
+h6 {
+  color: white;
+  font-weight: 700;
+}
 .flashes h4 {
   line-height: 2;
+}
+
+/* home page */
+nav .nav-wrapper {
+  padding-top: 20px;
+}
+#logo {
+  width: 50px;
+  height: 60px;
+}
+.text-shadow {
+  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+}
+.blueberry {
+  background-color: #a0c4ff;
+}
+.cakepop-icon {
+  color: rgb(170, 27, 27);
+}
+.cakepop {
+  background-color: #ffc6ff;
 }
 .fact {
   font-size: 1.5rem;
   background: RGBA(254, 214, 57, 0.3);
   color: darkgreen;
 }
+
 /* home page grid images */
 .row {
   display: flex;
@@ -96,7 +101,8 @@ h3 {
   }
 }
 
-/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+/* Responsive layout - makes the two columns stack on top of each other 
+instead of next to each other */
 @media screen and (max-width: 600px) {
   .column {
     flex: 100%;
@@ -115,4 +121,72 @@ h3 {
   .fact {
     font-size: 1.2rem;
   }
+}
+
+/* register/log in page */
+.card-color {
+  background-color: RGB(253, 255, 182, 0.5);
+}
+.button:hover {
+  background-color: #9bf6ff;
+}
+
+/* recipes page */
+.slider {
+  margin-top: 20px;
+}
+
+/* recipes display image overlay ref: W3school
+ https://www.w3schools.com/howto/howto_css_image_overlay_icon.asp */
+
+.recipe-container {
+  position: relative;
+  width: 100%;
+  max-width: 200px;
+}
+
+/* Make the image to responsive */
+.recipe-image {
+  width: 100%;
+  height: auto;
+  border: 5px solid #fdffb6; /* yellow border */
+  border-radius: 5px; /* Rounded border */
+}
+
+/* The overlay effect (full height and width) - 
+lays on top of the container and over the image */
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: 0.5s ease;
+  background: rgb(0, 0, 0);
+  background: rgba(0, 0, 0, 0.5); /* Black see-through */
+}
+
+/* When you mouse over the container, fade in the overlay icon*/
+.recipe-container:hover .overlay {
+  opacity: 1;
+}
+
+/* The icon inside the overlay is positioned in the middle vertically
+ and horizontally */
+.icon {
+  color: white;
+  font-size: 1.2rem;
+  text-align: center;
+  display: block;
+  cursor: pointer;
+  padding: 5px;
+  margin-top: 20px;
+}
+
+/* When you move the mouse over the icon, change color */
+.fa-user:hover {
+  color: #eee;
 }
