@@ -32,8 +32,8 @@ h3 {
   font-weight: bold;
 }
 h5 {
-  color: #fdffb6;
-  font-weight: 500;
+  color: #ffadad;
+  font-weight: 800;
 }
 h6 {
   color: white;
@@ -135,7 +135,9 @@ instead of next to each other */
 .slider {
   margin-top: 20px;
 }
-
+.recipe-name {
+  margin-top: 40px;
+}
 /* recipes display image overlay ref: W3school
  https://www.w3schools.com/howto/howto_css_image_overlay_icon.asp */
 
@@ -182,8 +184,7 @@ lays on top of the container and over the image */
   text-align: center;
   display: block;
   cursor: pointer;
-  padding: 5px;
-  margin-top: 20px;
+  margin-top: 18px;
 }
 
 /* When you move the mouse over the icon, change color */

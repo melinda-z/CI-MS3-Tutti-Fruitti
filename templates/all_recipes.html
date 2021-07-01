@@ -59,12 +59,14 @@
       <a href="#" class="icon">
         <i class="fas fa-eye"> View Recipe</i>
       </a>
+      {% if session.user %}
       <a href="#" class="icon">
         <i class="fas fa-edit"> Edit</i>
       </a>
       <a href="#" class="icon">
         <i class="fas fa-trash-alt"> Delete</i>
       </a>
+      {% endif %}
     </div>
   </div>
 </section>
