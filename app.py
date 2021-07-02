@@ -55,7 +55,7 @@ def log_in():
             ):
                 session["user"] = request.form.get("username").lower()
                 flash(
-                    "Welcome back, {}!".format(
+                    "You are successfully logged in, {}!".format(
                         request.form.get("username").capitalize()
                     )
                 )
@@ -106,6 +106,11 @@ def register():
         return redirect(url_for("my_recipes", username=session["user"]))
 
     return render_template("register.html")
+
+
+@app.route("/add_recipe")
+def add_recipe():
+    return render_template("add_recipe.html")
 
 
 if __name__ == "__main__":

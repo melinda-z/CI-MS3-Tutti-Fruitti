@@ -31,10 +31,12 @@ h3 {
   color: #4db6ac;
   font-weight: bold;
 }
+h4,
 h5 {
-  color: #ffadad;
-  font-weight: 800;
+  color: #c2185b;
+  font-weight: 700;
 }
+
 h6 {
   color: white;
   font-weight: 700;
@@ -48,7 +50,7 @@ nav .nav-wrapper {
   padding-top: 20px;
 }
 #logo {
-  width: 50px;
+  width: 60px;
   height: 60px;
 }
 .text-shadow {
@@ -190,4 +192,9 @@ lays on top of the container and over the image */
 /* When you move the mouse over the icon, change color */
 .fa-user:hover {
   color: #eee;
+}
+
+/* My recipes page */
+.add_recipe {
+  margin: 50px;
 }

@@ -1,0 +1,36 @@
+{% extends "base.html" %} {% block content %}
+<h3 class="center-align">Upload Recipe</h3>
+<form
+  class="input-field col s12 m6"
+  method="POST"
+  action="{{ url_for('add_recipe') }}"
+>
+  <select class="icons">
+    <option value="" disabled selected>Choose Smoothie Category</option>
+    <option value="" data-icon="static/img/smoothie-2.jpg">
+      Green Smoothies
+    </option>
+    <option value="" data-icon="static/img/superfood.jpg">
+      Superfood Smoothies
+    </option>
+    <option value="" data-icon="static/img/smoothie-3.jpg">
+      Immune Boost Smoothies
+    </option>
+    <option value="" data-icon="static/img/smoothie-6.jpg">
+      Weight Loss Smoothies
+    </option>
+    <option value="" data-icon="static/img/smoothie-14.jpg">
+      Kiddylicious Smoothies
+    </option>
+  </select>
+  <input placeholder="Enter Your Smoothie Name" type="text" required />
+  <input
+    id="new-ingredient"
+    type="text"
+    placeholder="Enter Your Ingredient"
+    required
+  />
+  <button type="button" class="btn" id="add">Add Ingredient</button>
+  <ul id="ingredients-list"></ul>
+</form>
+{% endblock %}
