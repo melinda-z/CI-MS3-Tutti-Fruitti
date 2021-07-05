@@ -116,12 +116,15 @@ instead of next to each other */
     display: none;
   }
 }
-@media screen and (max-width: 320px) {
+@media screen and (max-width: 331px) {
   nav .brand-logo {
     font-size: 1.6rem;
   }
   .fact {
     font-size: 1.2rem;
+  }
+  .add-btn {
+    font-size: 10px;
   }
 }
 
@@ -197,4 +200,30 @@ lays on top of the container and over the image */
 /* My recipes page */
 .add_recipe {
   margin: 50px;
+}
+
+/* Add recipe page */
+.b:hover {
+  cursor: pointer;
+  color: #caffbf;
+}
+::placeholder {
+  color: #000;
+}
+
+label {
+  color: #4db6ac;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.add-btn {
+  display: inline-block;
+  margin-left: 33%;
+}
+#ingredients-list {
+  line-height: 2;
+}
+#add-recipe-form {
+  padding: 20px;
 }

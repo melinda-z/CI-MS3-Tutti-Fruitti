@@ -1,36 +1,90 @@
 {% extends "base.html" %} {% block content %}
 <h3 class="center-align">Upload Recipe</h3>
 <form
-  class="input-field col s12 m6"
+  id="add-recipe-form"
+  class="input-field container col s12 m6 card-color"
   method="POST"
   action="{{ url_for('add_recipe') }}"
 >
-  <select class="icons">
-    <option value="" disabled selected>Choose Smoothie Category</option>
-    <option value="" data-icon="static/img/smoothie-2.jpg">
-      Green Smoothies
-    </option>
-    <option value="" data-icon="static/img/superfood.jpg">
-      Superfood Smoothies
-    </option>
-    <option value="" data-icon="static/img/smoothie-3.jpg">
-      Immune Boost Smoothies
-    </option>
-    <option value="" data-icon="static/img/smoothie-6.jpg">
-      Weight Loss Smoothies
-    </option>
-    <option value="" data-icon="static/img/smoothie-14.jpg">
-      Kiddylicious Smoothies
-    </option>
-  </select>
-  <input placeholder="Enter Your Smoothie Name" type="text" required />
-  <input
-    id="new-ingredient"
-    type="text"
-    placeholder="Enter Your Ingredient"
-    required
-  />
-  <button type="button" class="btn" id="add">Add Ingredient</button>
-  <ul id="ingredients-list"></ul>
+  <div class="row">
+    <label class="col s4" for="category">Smoothies Category</label>
+    <div class="col s8">
+      <select class="icons" id="category" name="category">
+        <option value="" disabled selected>Choose Smoothie Category</option>
+        <option value="" data-icon="static/img/smoothie-2.jpg">
+          Green Smoothies
+        </option>
+        <option value="" data-icon="static/img/superfood.jpg">
+          Superfood Smoothies
+        </option>
+        <option value="" data-icon="static/img/smoothie-3.jpg">
+          Immune Boost Smoothies
+        </option>
+        <option value="" data-icon="static/img/smoothie-6.jpg">
+          Weight Loss Smoothies
+        </option>
+        <option value="" data-icon="static/img/smoothie-14.jpg">
+          Kiddylicious Smoothies
+        </option>
+      </select>
+    </div>
+  </div>
+  <div class="row">
+    <label class="col s4" for="name">Smoothie Name</label>
+    <input
+      id="name"
+      name="name"
+      class="col s8"
+      placeholder="Enter Your Smoothie Name"
+      type="text"
+      required
+    />
+  </div>
+  <div class="row">
+    <label class="col s4" for="new-ingredient">Ingredients</label>
+    <input
+      class="col s8"
+      id="new-ingredient"
+      name="new-ingredient"
+      type="text"
+      placeholder="Enter Your Ingredient"
+      required
+    />
+    <button type="button" class="btn-small add-btn" id="add">
+      Add Ingredient
+    </button>
+    <div class="col s9">
+      <div class="card-panel green lighten-5">
+        <span class="green-text text-darken-2"
+          ><ul id="ingredients-list"></ul>
+        </span>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <label class="col s4" for="method">Method</label>
+    <input
+      class="col s8"
+      id="method"
+      name="method"
+      type="text"
+      placeholder="Add The Method Steps"
+      required
+    />
+  </div>
+  <div class="row">
+    <label class="col s4" for="image-url">Image URL</label>
+    <input
+      class="col s8"
+      id="image-url"
+      name="image-url"
+      type="text"
+      value="https://www.jessicagavin.com/wp-content/uploads/2020/01/green-smoothie..."
+      required
+    />
+  </div>
+  <button class="btn wave-effect waves-light add-btn" type="submit">
+    Upload <i class="fas fa-plus-square"></i>
+  </button>
 </form>
 {% endblock %}

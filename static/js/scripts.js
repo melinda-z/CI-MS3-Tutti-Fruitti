@@ -7,7 +7,6 @@ $(document).ready(function () {
 var add = document.getElementById("add");
 var input = document.getElementById("new-ingredient");
 var ul = document.getElementById("ingredients-list");
-var li = document.querySelectorAll("li");
 
 function inputLength() {
   return input.value.length;
@@ -20,6 +19,11 @@ function createListElement() {
   ul.appendChild(li);
   input.value = "";
   var deleteButton = document.createElement("button");
+  deleteButton.style.marginLeft = "60px";
+  deleteButton.style.backgroundColor = "#81c784";
+  deleteButton.style.borderRadius = "5px";
+  deleteButton.className = "b";
+
   var buttonText = document.createTextNode("Delete");
   deleteButton.appendChild(buttonText);
   li.appendChild(deleteButton);
