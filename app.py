@@ -111,13 +111,17 @@ def register():
 @app.route("/add_recipe", methods=["GET", "POST"])
 def add_recipe():
     if request.method == "POST":
+        user = mongo.db.users.find_one({"username": session["user"]})
+        category = mongo.db.categories.find_one(
+            {"category_name": request.form.get("category_name")}
+        )
         recipe = {
-            "category_name": request.form.get("category_name"),
+            "category_name": ObjectId(category["_id"]),
             "smoothie_name": request.form.get("smoothie_name"),
             "ingredients": request.form.getlist("ingredients_list"),
             "method": request.form.get("method"),
             "image_url": request.form.get("image_url"),
-            "created_by": session["user"],
+            "created_by": ObjectId(user["_id"]),
         }
         mongo.db.recipes.insert_one(recipe)
         flash("Recipe Successfully Added")

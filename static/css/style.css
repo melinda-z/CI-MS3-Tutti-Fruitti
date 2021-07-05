@@ -159,8 +159,9 @@ instead of next to each other */
 
 /* Make the image to responsive */
 .recipe-image {
-  width: 100%;
-  height: 100%;
+  width: 200px;
+  height: 200px;
+
   border: 5px solid #fdffb6; /* yellow border */
   border-radius: 5px; /* Rounded border */
 }
