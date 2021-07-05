@@ -1,34 +1,32 @@
 {% extends "base.html" %} {% block content %}
 <h3 class="center-align">Upload Recipe</h3>
+<!-- Upload Recipe form -->
 <form
   id="add-recipe-form"
   class="input-field container col s12 m6 card-color"
   method="POST"
   action="{{ url_for('add_recipe') }}"
 >
+  <!-- Select smoothie category  -->
   <div class="row">
-    <label class="col s4" for="category">Smoothies Category</label>
+    <label class="col s4" for="category_name">Choose Smoothie Category</label>
     <div class="col s8">
-      <select class="icons" id="category" name="category">
+      <select
+        class="icons validate"
+        id="category_name"
+        name="category_name"
+        required
+      >
         <option value="" disabled selected>Choose Smoothie Category</option>
-        <option value="" data-icon="static/img/smoothie-2.jpg">
-          Green Smoothies
+        {% for category in categories %}
+        <option value="{{ category.category_name }}">
+          {{ category.category_name }}
         </option>
-        <option value="" data-icon="static/img/superfood.jpg">
-          Superfood Smoothies
-        </option>
-        <option value="" data-icon="static/img/smoothie-3.jpg">
-          Immune Boost Smoothies
-        </option>
-        <option value="" data-icon="static/img/smoothie-6.jpg">
-          Weight Loss Smoothies
-        </option>
-        <option value="" data-icon="static/img/smoothie-14.jpg">
-          Kiddylicious Smoothies
-        </option>
+        {% endfor %}
       </select>
     </div>
   </div>
+  <!-- Smoothie name -->
   <div class="row">
     <label class="col s4" for="name">Smoothie Name</label>
     <input
@@ -37,9 +35,12 @@
       class="col s8"
       placeholder="Enter Your Smoothie Name"
       type="text"
+      minlength="5"
+      maxlength="50"
       required
     />
   </div>
+  <!-- Smoothies ingredients -->
   <div class="row">
     <label class="col s4" for="new-ingredient">Ingredients</label>
     <input
@@ -47,13 +48,14 @@
       id="new-ingredient"
       name="new-ingredient"
       type="text"
+      minlength="5"
+      maxlength="50"
       placeholder="Enter Your Ingredient"
-      required
     />
     <button type="button" class="btn-small add-btn" id="add">
       Add Ingredient
     </button>
-    <div class="col s9">
+    <div class="col s8">
       <div class="card-panel green lighten-5">
         <span class="green-text text-darken-2"
           ><ul id="ingredients-list"></ul>
@@ -61,17 +63,21 @@
       </div>
     </div>
   </div>
+  <!-- Smoothie method -->
   <div class="row">
     <label class="col s4" for="method">Method</label>
-    <input
-      class="col s8"
+    <textarea
+      class="col s8 materialize-textarea validate"
       id="method"
       name="method"
       type="text"
+      minlength="5"
+      maxlength="200"
       placeholder="Add The Method Steps"
       required
-    />
+    ></textarea>
   </div>
+  <!-- Smoothie image url -->
   <div class="row">
     <label class="col s4" for="image-url">Image URL</label>
     <input

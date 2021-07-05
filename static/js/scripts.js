@@ -1,9 +1,10 @@
+// materilize initialization
 $(document).ready(function () {
   $(".sidenav").sidenav({ edge: "right" });
   $(".slider").slider();
   $("select").formSelect();
 });
-
+// Add ingredient functionality
 var add = document.getElementById("add");
 var input = document.getElementById("new-ingredient");
 var ul = document.getElementById("ingredients-list");

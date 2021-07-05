@@ -216,10 +216,10 @@ label {
   font-size: 1.2rem;
   font-weight: 600;
 }
-
 .add-btn {
   display: inline-block;
   margin-left: 33%;
+  margin-bottom: 15px;
 }
 #ingredients-list {
   line-height: 2;
