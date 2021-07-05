@@ -137,6 +137,10 @@ instead of next to each other */
 }
 
 /* recipes page */
+.recipes {
+  display: flex;
+  flex-wrap: wrap;
+}
 .slider {
   margin-top: 20px;
 }
@@ -150,12 +154,13 @@ instead of next to each other */
   position: relative;
   width: 100%;
   max-width: 200px;
+  margin: 15px;
 }
 
 /* Make the image to responsive */
 .recipe-image {
   width: 100%;
-  height: auto;
+  height: 100%;
   border: 5px solid #fdffb6; /* yellow border */
   border-radius: 5px; /* Rounded border */
 }
@@ -189,7 +194,7 @@ lays on top of the container and over the image */
   text-align: center;
   display: block;
   cursor: pointer;
-  margin-top: 18px;
+  margin-top: 15px;
 }
 
 /* When you move the mouse over the icon, change color */

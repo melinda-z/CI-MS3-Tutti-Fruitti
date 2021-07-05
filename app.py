@@ -33,9 +33,9 @@ def all_recipes():
 def my_recipes(username):
     # grab the session user's username from db
     username = mongo.db.users.find_one({"username": session["user"]})["username"]
-
+    recipes = list(mongo.db.recipes.find())
     if session["user"]:
-        return render_template("my_recipes.html", username=username)
+        return render_template("my_recipes.html", username=username, recipes=recipes)
 
     return redirect(url_for("log_in"))
 
@@ -108,8 +108,20 @@ def register():
     return render_template("register.html")
 
 
-@app.route("/add_recipe")
+@app.route("/add_recipe", methods=["GET", "POST"])
 def add_recipe():
+    if request.method == "POST":
+        recipe = {
+            "category_name": request.form.get("category_name"),
+            "smoothie_name": request.form.get("smoothie_name"),
+            "ingredients": request.form.getlist("ingredients_list"),
+            "method": request.form.get("method"),
+            "image_url": request.form.get("image_url"),
+            "created_by": session["user"],
+        }
+        mongo.db.recipes.insert_one(recipe)
+        flash("Recipe Successfully Added")
+        return redirect(url_for("my_recipes", username=session["user"]))
     categories = mongo.db.categories.find().sort("category_name", 1)
     return render_template("add_recipe.html", categories=categories)
 

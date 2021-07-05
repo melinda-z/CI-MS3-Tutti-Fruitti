@@ -46,8 +46,9 @@
   </div>
 </section>
 <section class="search-bar"></section>
-{% for recipe in recipes %}
+
 <section class="recipes">
+  {% for recipe in recipes %}
   <div class="recipe-container">
     <img
       src="{{ recipe.image_url }}"
@@ -69,5 +70,6 @@
       {% endif %}
     </div>
   </div>
+  {% endfor %}
 </section>
-{% endfor %} {% endblock %}
+{% endblock %}
