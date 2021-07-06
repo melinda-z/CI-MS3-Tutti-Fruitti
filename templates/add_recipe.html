@@ -9,9 +9,9 @@
 >
   <!-- Select smoothie category  -->
   <div class="row">
-    <label class="col s1" for="category_name"
-      ><img src="{{url_for('static', filename='img/category.png') }}" alt=""
-    /></label>
+    <label class="col s1">
+      <img src="{{url_for('static', filename='img/category.png') }}" alt="" />
+    </label>
     <div class="col s11">
       <select
         class="icons validate"
@@ -19,7 +19,7 @@
         name="category_name"
         required
       >
-        <option value="" disabled selected>Choose Smoothie Category</option>
+        <option value="" disabled selected>Choose Category</option>
         {% for category in categories %}
         <option value="{{ category.category_name }}">
           {{ category.category_name }}
@@ -37,7 +37,7 @@
       <input
         id="smoothie_name"
         name="smoothie_name"
-        placeholder="Enter Your Smoothie Name"
+        placeholder="Smoothie Name"
         type="text"
         minlength="5"
         maxlength="50"
@@ -57,7 +57,7 @@
         type="text"
         minlength="5"
         maxlength="50"
-        placeholder="Enter Your Ingredient"
+        placeholder="Ingredient"
         required
       />
       <button type="button" class="btn-small" id="add">Add Ingredient</button>
@@ -77,7 +77,7 @@
         type="text"
         minlength="5"
         maxlength="200"
-        placeholder="Add The Method Steps"
+        placeholder="Method"
         required
       ></textarea>
     </div>
@@ -97,8 +97,10 @@
       />
     </div>
   </div>
-  <button class="btn wave-effect waves-light add-btn" type="submit">
-    Upload <i class="fas fa-plus-square"></i>
-  </button>
+  <div class="row">
+    <button class="btn-small add-btn" type="submit">
+      Upload <i class="fas fa-plus-square"></i>
+    </button>
+  </div>
 </form>
 {% endblock %}

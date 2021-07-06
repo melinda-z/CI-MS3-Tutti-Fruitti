@@ -222,7 +222,6 @@ lays on top of the container and over the image */
     width: 50vw;
     height: auto;
   }
-
   label img {
     width: 40px;
   }
@@ -245,20 +244,39 @@ lays on top of the container and over the image */
   h5 {
     font-size: 1.5rem;
   }
-  #add-recipe-form {
-    display: flex;
-    flex-direction: column;
-    padding: 0;
+  h6 {
+    font-size: 1rem;
+    word-wrap: break-word;
   }
   label img {
     width: 30px;
+    height: auto;
     margin-right: 20px;
   }
 }
+@media screen and (max-width: 414px) {
+  .recipe-img {
+    margin-left: 0;
+    width: 35vw;
+    height: auto;
+  }
+  .flex-wrapper {
+    margin: 5px;
+  }
+}
+
 @media screen and (max-width: 375px) {
   label img {
     width: 28px;
     padding: 0;
+  }
+  .add-btn {
+    font-size: 10px;
+  }
+}
+@media screen and (max-width: 335px) {
+  label img {
+    display: none;
   }
 }
 @media screen and (max-width: 331px) {
@@ -267,8 +285,5 @@ lays on top of the container and over the image */
   }
   .fact {
     font-size: 1.2rem;
-  }
-  .add-btn {
-    font-size: 10px;
   }
 }
