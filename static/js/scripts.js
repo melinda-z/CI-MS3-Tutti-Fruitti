@@ -13,35 +13,55 @@ function inputLength() {
   return input.value.length;
 }
 
-function createListElement() {
-  var li = document.createElement("li");
-  li.appendChild(document.createTextNode(input.value));
-  console.log(input.value);
-  ul.appendChild(li);
-  input.value = "";
+function createInput() {
+  var newInput = document.createElement("input");
+  newInput.setAttribute("type", "text");
+  newInput.setAttribute("name", "new-ingredient");
+  newInput.setAttribute("minlength", "5");
+  newInput.setAttribute("maxlength", "50");
+  newInput.setAttribute("placeholder", "Enter Your Ingredient");
+  newInput.setAttribute("class", "col");
+  newInput.setAttribute("class", "s8");
   var deleteButton = document.createElement("button");
-  deleteButton.style.marginLeft = "60px";
-  deleteButton.style.backgroundColor = "#81c784";
-  deleteButton.style.borderRadius = "5px";
-  deleteButton.className = "b";
-
-  var buttonText = document.createTextNode("Delete");
-  deleteButton.appendChild(buttonText);
-  li.appendChild(deleteButton);
-  function deleteItems() {
-    li.remove();
+  var t = document.createTextNode("Delete");
+  deleteButton.appendChild(t);
+  ul.appendChild(newInput);
+  ul.appendChild(deleteButton);
+  function deleteInput() {
+    newInput.remove();
+    deleteButton.remove();
   }
-  deleteButton.addEventListener("click", deleteItems);
+  deleteButton.addEventListener("click", deleteInput);
 }
+
+// function createListElement() {
+//   var li = document.createElement("li");
+//   li.appendChild(document.createTextNode(input.value));
+//   ul.appendChild(li);
+//   input.value = "";
+//   var deleteButton = document.createElement("button");
+//   deleteButton.style.marginLeft = "60px";
+//   deleteButton.style.backgroundColor = "#81c784";
+//   deleteButton.style.borderRadius = "5px";
+//   deleteButton.className = "b";
+
+//   var buttonText = document.createTextNode("Delete");
+//   deleteButton.appendChild(buttonText);
+//   li.appendChild(deleteButton);
+//   function deleteItems() {
+//     li.remove();
+//   }
+//   deleteButton.addEventListener("click", deleteItems);
+// }
 function addListAfterClick() {
   if (inputLength() > 0) {
-    createListElement();
+    createInput();
   }
 }
 
 function addListAfterKeypress(event) {
   if (inputLength() > 0 && event.keyCode === 13) {
-    createListElement();
+    createInput();
   }
 }
 add.addEventListener("click", addListAfterClick);

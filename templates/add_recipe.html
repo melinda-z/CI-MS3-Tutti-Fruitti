@@ -3,14 +3,16 @@
 <!-- Upload Recipe form -->
 <form
   id="add-recipe-form"
-  class="input-field container col s12 m6 card-color"
+  class="container col s12 m6 card-color"
   method="POST"
   action="{{ url_for('add_recipe') }}"
 >
   <!-- Select smoothie category  -->
   <div class="row">
-    <label class="col s4" for="category_name">Choose Smoothie Category</label>
-    <div class="col s8">
+    <label class="col s1" for="category_name"
+      ><img src="{{url_for('static', filename='img/category.png') }}" alt=""
+    /></label>
+    <div class="col s11">
       <select
         class="icons validate"
         id="category_name"
@@ -28,66 +30,72 @@
   </div>
   <!-- Smoothie name -->
   <div class="row">
-    <label class="col s4" for="smoothie_name">Smoothie Name</label>
-    <input
-      id="smoothie_name"
-      name="smoothie_name"
-      class="col s8"
-      placeholder="Enter Your Smoothie Name"
-      type="text"
-      minlength="5"
-      maxlength="50"
-      required
-    />
+    <label class="col s1" for="smoothie_name"
+      ><img src="{{url_for('static', filename='img/name.png') }}" alt=""
+    /></label>
+    <div class="col s11">
+      <input
+        id="smoothie_name"
+        name="smoothie_name"
+        placeholder="Enter Your Smoothie Name"
+        type="text"
+        minlength="5"
+        maxlength="50"
+        required
+      />
+    </div>
   </div>
   <!-- Smoothies ingredients -->
   <div class="row">
-    <label class="col s4" for="new-ingredient">Ingredients</label>
-    <input
-      class="col s8"
-      id="new-ingredient"
-      name="new-ingredient"
-      type="text"
-      minlength="5"
-      maxlength="50"
-      placeholder="Enter Your Ingredient"
-    />
-    <button type="button" class="btn-small add-btn" id="add">
-      Add Ingredient
-    </button>
-    <div class="col s8">
-      <div class="card-panel green lighten-5">
-        <span class="green-text text-darken-2"
-          ><ul name="ingredients-list" id="ingredients-list"></ul>
-        </span>
-      </div>
+    <label class="col s1" for="new-ingredient"
+      ><img src="{{url_for('static', filename='img/ingredients.png') }}" alt=""
+    /></label>
+    <div class="col s11">
+      <input
+        id="new-ingredient"
+        name="new-ingredient"
+        type="text"
+        minlength="5"
+        maxlength="50"
+        placeholder="Enter Your Ingredient"
+        required
+      />
+      <button type="button" class="btn-small" id="add">Add Ingredient</button>
+      <ul id="ingredients-list" name="ingredients-list"></ul>
     </div>
   </div>
   <!-- Smoothie method -->
   <div class="row">
-    <label class="col s4" for="method">Method</label>
-    <textarea
-      class="col s8 materialize-textarea validate"
-      id="method"
-      name="method"
-      type="text"
-      minlength="5"
-      maxlength="200"
-      placeholder="Add The Method Steps"
-      required
-    ></textarea>
+    <label class="col s1" for="method"
+      ><img src="{{url_for('static', filename='img/method.png') }}" alt=""
+    /></label>
+    <div class="col s11">
+      <textarea
+        class="materialize-textarea validate"
+        id="method"
+        name="method"
+        type="text"
+        minlength="5"
+        maxlength="200"
+        placeholder="Add The Method Steps"
+        required
+      ></textarea>
+    </div>
   </div>
   <!-- Smoothie image url -->
   <div class="row">
-    <label class="col s4" for="image_url">Image URL</label>
-    <input
-      class="col s8"
-      id="image_url"
-      name="image_url"
-      type="text"
-      value="https://www.jessicagavin.com/wp-content/uploads/2020/01/green-smoothie..."
-      required
-    />
+    <label class="col s1" for="image_url"
+      ><img src="{{url_for('static', filename='img/image.png') }}" alt=""
+    /></label>
+    <div class="col s11">
+      <input
+        id="image_url"
+        name="image_url"
+        type="text"
+        value="https://www.google.com/url?sa=i&url=https%3A%2F%2Frecipesformen.com%2Fhealthy-mango-smoothie-recipes%2F&psig=AOvVaw3ffNDJd76mbWcjsT1DdF73&ust=1625667099697000&source=images&cd=vfe&ved=0CAoQjRxqFwoTCJibvavQzvECFQAAAAAdAAAAABAE"
+        required
+      />
+    </div>
   </div>
   <button class="btn wave-effect waves-light add-btn" type="submit">
     Upload <i class="fas fa-plus-square"></i>

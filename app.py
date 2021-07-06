@@ -29,6 +29,12 @@ def all_recipes():
     return render_template("all_recipes.html", recipes=recipes)
 
 
+@app.route(("/full_recipe/<recipe_id>"))
+def full_recipe(recipe_id):
+    recipe = mongo.db.recipes.find_one({"_id": ObjectId(recipe_id)})
+    return render_template("full_recipe.html", recipe=recipe)
+
+
 @app.route("/my_recipes/<username>", methods=["GET", "POST"])
 def my_recipes(username):
     # grab the session user's username from db
@@ -118,7 +124,7 @@ def add_recipe():
         recipe = {
             "category_name": ObjectId(category["_id"]),
             "smoothie_name": request.form.get("smoothie_name"),
-            "ingredients": request.form.getlist("ingredients_list"),
+            "ingredients": request.form.getlist("new-ingredient"),
             "method": request.form.get("method"),
             "image_url": request.form.get("image_url"),
             "created_by": ObjectId(user["_id"]),

@@ -16,7 +16,7 @@
     />
     <div class="overlay">
       <h6 class="recipe-name center-align">{{ recipe.smoothie_name }}</h6>
-      <a href="#" class="icon">
+      <a href="{{ url_for('full_recipe',recipe_id=recipe._id) }}" class="icon">
         <i class="fas fa-eye"> View Recipe</i>
       </a>
       {% if session.user %}

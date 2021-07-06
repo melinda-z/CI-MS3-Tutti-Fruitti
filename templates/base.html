@@ -37,7 +37,11 @@
       <!-- main nav -->
       <nav class="nav-extended text-shadow blueberry">
         <div class="nav-wrapper">
-          <img id="logo" src="static/img/logo.png" alt="smoothie-icon" />
+          <img
+            id="logo"
+            src="{{url_for('static', filename='img/logo.png') }}"
+            alt="smoothie-icon"
+          />
           <a href="{{ url_for('home') }}" class="brand-logo">Tutti Fruitti </a>
           <a
             href="{{ url_for('home') }}"
