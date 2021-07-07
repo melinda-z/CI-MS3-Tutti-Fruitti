@@ -128,3 +128,7 @@ for (var i = 0; i < delete_ingredient_buttons.length; i++) {
     delete_existing_ingredient
   );
 }
+// https://www.w3schools.com/jsref/met_his_back.asp
+function goBack() {
+  window.history.back();
+}
