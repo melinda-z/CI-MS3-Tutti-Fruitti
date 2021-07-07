@@ -61,7 +61,7 @@
         <i class="fas fa-eye"> View Recipe</i>
       </a>
       {% if session.user %}
-      <a href="#" class="icon">
+      <a href="{{ url_for('edit_recipe',recipe_id=recipe._id) }}" class="icon">
         <i class="fas fa-edit"> Edit</i>
       </a>
       <a href="#" class="icon">

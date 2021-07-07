@@ -1,0 +1,110 @@
+{% extends "base.html" %} {% block content %}
+<h3 class="center-align">Edit Recipe</h3>
+<!-- Upload Recipe form -->
+<form
+  id="add-recipe-form"
+  class="container col s12 m6 card-color"
+  method="POST"
+  action="{{ url_for('edit_recipe',recipe_id=recipe._id) }}"
+>
+  <!-- Select smoothie category  -->
+  <div class="row">
+    <label class="col s1">
+      <img src="{{url_for('static', filename='img/category.png') }}" alt="" />
+    </label>
+    <div class="col s11">
+      <select
+        class="icons validate"
+        id="category_name"
+        name="category_name"
+        required
+      >
+        <option value="" disabled selected>Choose Category</option>
+        {% for category in categories %}
+        <option value="{{ category.category_name }}">
+          {{ category.category_name }}
+        </option>
+        {% endfor %}
+      </select>
+    </div>
+  </div>
+  <!-- Smoothie name -->
+  <div class="row">
+    <label class="col s1" for="smoothie_name"
+      ><img src="{{url_for('static', filename='img/name.png') }}" alt=""
+    /></label>
+    <div class="col s11">
+      <input
+        class="validate"
+        id="smoothie_name"
+        name="smoothie_name"
+        placeholder=" Smoothie Name"
+        type="text"
+        minlength="5"
+        maxlength="50"
+        required
+      />
+    </div>
+  </div>
+  <!-- Smoothies ingredients -->
+  <div class="row">
+    <label class="col s1" for="new-ingredient"
+      ><img src="{{url_for('static', filename='img/ingredients.png') }}" alt=""
+    /></label>
+    <div class="col s11">
+      <input
+        class="validate"
+        id="new-ingredient"
+        name="new-ingredient"
+        type="text"
+        minlength="5"
+        maxlength="50"
+        placeholder=" Ingredient"
+        required
+      />
+      <button type="button" class="btn-small" id="add">Add Ingredient</button>
+      <ul id="ingredients-list" name="ingredients-list"></ul>
+    </div>
+  </div>
+  <!-- Smoothie method -->
+  <div class="row">
+    <label class="col s1" for="method"
+      ><img src="{{url_for('static', filename='img/method.png') }}" alt=""
+    /></label>
+    <div class="col s11">
+      <textarea
+        class="materialize-textarea validate"
+        id="method"
+        name="method"
+        type="text"
+        minlength="5"
+        maxlength="200"
+        placeholder=" Method"
+        required
+      ></textarea>
+      <ul id="step-list"></ul>
+      <button type="button" class="btn-small" id="add-steps">Add steps</button>
+    </div>
+  </div>
+  <!-- Smoothie image url -->
+  <div class="row">
+    <label class="col s1" for="image_url"
+      ><img src="{{url_for('static', filename='img/image.png') }}" alt=""
+    /></label>
+    <div class="col s11">
+      <input
+        id="image_url"
+        name="image_url"
+        type="text"
+        value=" https://www.google.com/url?sa=i&url=https%3A%2F%2Frecipesformen.com%2Fhealthy-mango-smoothie-recipes%2F&psig=AOvVaw3ffNDJd76mbWcjsT1DdF73&ust=1625667099697000&source=images&cd=vfe&ved=0CAoQjRxqFwoTCJibvavQzvECFQAAAAAdAAAAABAE"
+        required
+      />
+    </div>
+  </div>
+  <div class="row">
+    <button class="btn-small add-btn" type="submit">
+      Edit Recipe <i class="fas fa-edit right"></i>
+    </button>
+  </div>
+</form>
+{% endblock %}
