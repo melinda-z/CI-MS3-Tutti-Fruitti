@@ -81,14 +81,14 @@ const ingredientList = document.getElementById("ingredients-list");
 function inputLength() {
   return input.value.length;
 }
-
+// create another input field after adding one ingredient
 function createInput() {
   var newInput = document.createElement("input");
   newInput.setAttribute("type", "text");
   newInput.setAttribute("name", "new-ingredient");
   newInput.setAttribute("minlength", "5");
   newInput.setAttribute("maxlength", "50");
-  newInput.setAttribute("placeholder", "Enter Your Ingredient");
+  newInput.setAttribute("placeholder", "Add Another Ingredient");
   var deleteButton = document.createElement("button");
   deleteButton.setAttribute("class", "btn-small");
   var t = document.createTextNode("Delete");
@@ -109,3 +109,22 @@ function addListAfterClick() {
 }
 
 add.addEventListener("click", addListAfterClick);
+
+// Edit Recipe functionality
+function delete_existing_ingredient(event) {
+  // target the ingredient to be deleted
+  ingredient_to_delete = event.target.getAttribute("data-ingredient-id");
+  document.getElementById(ingredient_to_delete).remove();
+  event.target.remove();
+}
+// get all the delete buttons assigned with each ingredient
+delete_ingredient_buttons = document.getElementsByClassName(
+  "delete-existing-ingredient"
+);
+// iterate through each ingredient delete buttons then add event listener
+for (var i = 0; i < delete_ingredient_buttons.length; i++) {
+  delete_ingredient_buttons[i].addEventListener(
+    "click",
+    delete_existing_ingredient
+  );
+}

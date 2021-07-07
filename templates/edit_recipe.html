@@ -65,12 +65,31 @@
         type="text"
         minlength="5"
         maxlength="50"
-        value="{{ recipe.ingredients }}"
         placeholder=" Ingredient"
         required
       />
       <button type="button" class="btn-small" id="add">Add Ingredient</button>
-      <ul id="ingredients-list" name="ingredients-list"></ul>
+      <ul id="ingredients-list" name="ingredients-list">
+        {% for ingredient in recipe.ingredients %}
+        <input
+          class="validate"
+          type="text"
+          minlength="5"
+          maxlength="50"
+          value="{{ ingredient }}"
+          placeholder=" Ingredient"
+          id="ingredient_{{loop.index}}"
+          required
+        />
+        <button
+          type="button"
+          class="btn-small delete-existing-ingredient"
+          data-ingredient-id="ingredient_{{loop.index}}"
+        >
+          Delete
+        </button>
+        {% endfor %}
+      </ul>
     </div>
   </div>
   <!-- Edit method -->
