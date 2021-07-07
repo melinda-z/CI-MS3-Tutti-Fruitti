@@ -1,10 +1,10 @@
 {% extends "base.html" %} {% block content %}
 <section class="recipe-header">
+  <!-- materilize  slider -->
   <div class="slider">
     <ul class="slides">
       <li>
         <img src="static/img/smoothie-2.jpg" />
-        <!-- random image -->
         <div class="caption center-align">
           <h3>Green Smoothies</h3>
           <h5>Cleanse and detoxifying!</h5>
@@ -12,7 +12,6 @@
       </li>
       <li>
         <img src="static/img/superfood.jpg" />
-        <!-- random image -->
         <div class="caption left-align">
           <h3>Superfood Smoothies</h3>
           <h5>Full of Protein and nutrients!</h5>
@@ -20,7 +19,6 @@
       </li>
       <li>
         <img src="static/img/smoothie-3.jpg" />
-        <!-- random image -->
         <div class="caption right-align">
           <h3>Immune Boost Smoothies</h3>
           <h5>Defense and Protect!</h5>
@@ -28,7 +26,6 @@
       </li>
       <li>
         <img src="static/img/smoothie-6.jpg" />
-        <!-- random image -->
         <div class="caption center-align">
           <h3>Weight Loss Smoothies</h3>
           <h5>Help you lossing inches!</h5>
@@ -36,7 +33,6 @@
       </li>
       <li>
         <img src="static/img/smoothie-5.jpg" />
-        <!-- random image -->
         <div class="caption center-align">
           <h3>Kiddylicious Smoothies</h3>
           <h5>Best friend for the sweet teeth buddies!</h5>
@@ -48,6 +44,9 @@
 <section class="search-bar"></section>
 
 <section class="recipes">
+  <!-- * recipes display image overlay ref: W3school
+ https://www.w3schools.com/howto/howto_css_image_overlay_icon.asp */ -->
+
   {% for recipe in recipes %}
   <div class="recipe-container">
     <img
@@ -60,7 +59,7 @@
       <a href="{{ url_for('full_recipe',recipe_id=recipe._id) }}" class="icon">
         <i class="fas fa-eye"> View Recipe</i>
       </a>
-      {% if session.user %}
+      {% if session.user|lower == recipe.created_by|lower %}
       <a href="{{ url_for('edit_recipe',recipe_id=recipe._id) }}" class="icon">
         <i class="fas fa-edit"> Edit</i>
       </a>
