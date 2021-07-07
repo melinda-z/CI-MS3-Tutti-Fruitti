@@ -71,6 +71,7 @@
       <button type="button" class="btn-small" id="add">Add Ingredient</button>
       <ul id="ingredients-list" name="ingredients-list">
         {% for ingredient in recipe.ingredients %}
+        <!-- recreate input field to loop through each ingredient for display -->
         <input
           class="validate"
           type="text"
@@ -81,6 +82,7 @@
           id="ingredient_{{loop.index}}"
           required
         />
+        <!-- recreated a delete buttion with each exsisting ingredient & link them -->
         <button
           type="button"
           class="btn-small delete-existing-ingredient"
@@ -127,9 +129,17 @@
       />
     </div>
   </div>
-  <div class="row">
+  <!-- submit button -->
+  <div class="row btn-container">
+    <a
+      href="{{ url_for('all_recipes') }}"
+      class="btn-small cancel-btn"
+      type="submit"
+    >
+      Cancel <i class="fas fa-times-circle"></i>
+    </a>
     <button class="btn-small add-btn" type="submit">
-      Edit Recipe <i class="fas fa-edit right"></i>
+      Edit <i class="fas fa-edit"></i>
     </button>
   </div>
 </form>

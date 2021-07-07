@@ -178,13 +178,19 @@ lays on top of the container and over the image */
 }
 
 .add-btn {
-  display: inline-block;
-  margin-left: 50%;
-  margin-bottom: 15px;
+  position: absolute;
+  margin-left: 80%;
 }
-
+.btn-container {
+  position: relative;
+}
+.cancel-btn {
+  position: absolute;
+  margin-left: 60%;
+}
 #add-recipe-form {
   padding: 20px;
+  margin-bottom: 40px;
 }
 /* full recipe page */
 .flex-wrapper {
