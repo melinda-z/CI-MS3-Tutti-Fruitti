@@ -1,13 +1,13 @@
 {% extends "base.html" %} {% block content %}
 <h3 class="center-align">Edit Recipe</h3>
-<!-- Upload Recipe form -->
+<!-- Edit Recipe form -->
 <form
   id="add-recipe-form"
   class="container col s12 m6 card-color"
   method="POST"
   action="{{ url_for('edit_recipe',recipe_id=recipe._id) }}"
 >
-  <!-- Select smoothie category  -->
+  <!-- Edit smoothie category  -->
   <div class="row">
     <label class="col s1">
       <img src="{{url_for('static', filename='img/category.png') }}" alt="" />
@@ -19,16 +19,21 @@
         name="category_name"
         required
       >
-        <option value="" disabled selected>Choose Category</option>
-        {% for category in categories %}
-        <option value="{{ category.category_name }}">
-          {{ category.category_name }}
+        <option value="" disabled>Choose Category</option>
+        {% for category in categories %} {% if category.category_name ==
+        recipe.category_name %}
+        <option value="{{ category.category_name }} selected">
+          {{-category.category_name-}}
         </option>
-        {% endfor %}
+        {% else %}
+        <option value="{{ category.category_name }}">
+          {{-category.category_name-}}
+        </option>
+        {% endif%} {% endfor %}
       </select>
     </div>
   </div>
-  <!-- Smoothie name -->
+  <!-- Edit Smoothie name -->
   <div class="row">
     <label class="col s1" for="smoothie_name"
       ><img src="{{url_for('static', filename='img/name.png') }}" alt=""
@@ -42,11 +47,12 @@
         type="text"
         minlength="5"
         maxlength="50"
+        value="{{ recipe.smoothie_name }}"
         required
       />
     </div>
   </div>
-  <!-- Smoothies ingredients -->
+  <!-- Edit ingredients -->
   <div class="row">
     <label class="col s1" for="new-ingredient"
       ><img src="{{url_for('static', filename='img/ingredients.png') }}" alt=""
@@ -55,10 +61,11 @@
       <input
         class="validate"
         id="new-ingredient"
-        name="new-ingredient"
+        name="new-ingredient "
         type="text"
         minlength="5"
         maxlength="50"
+        value="{{ recipe.ingredients }}"
         placeholder=" Ingredient"
         required
       />
@@ -66,7 +73,7 @@
       <ul id="ingredients-list" name="ingredients-list"></ul>
     </div>
   </div>
-  <!-- Smoothie method -->
+  <!-- Edit method -->
   <div class="row">
     <label class="col s1" for="method"
       ><img src="{{url_for('static', filename='img/method.png') }}" alt=""
@@ -74,19 +81,19 @@
     <div class="col s11">
       <textarea
         class="materialize-textarea validate"
-        id="method"
-        name="method"
+        id="method "
+        name="method "
         type="text"
         minlength="5"
         maxlength="200"
         placeholder=" Method"
         required
-      ></textarea>
-      <ul id="step-list"></ul>
-      <button type="button" class="btn-small" id="add-steps">Add steps</button>
+      >
+{{ recipe.method }}</textarea
+      >
     </div>
   </div>
-  <!-- Smoothie image url -->
+  <!--  Edit Smoothie image url -->
   <div class="row">
     <label class="col s1" for="image_url"
       ><img src="{{url_for('static', filename='img/image.png') }}" alt=""
@@ -96,7 +103,7 @@
         id="image_url"
         name="image_url"
         type="text"
-        value=" https://www.google.com/url?sa=i&url=https%3A%2F%2Frecipesformen.com%2Fhealthy-mango-smoothie-recipes%2F&psig=AOvVaw3ffNDJd76mbWcjsT1DdF73&ust=1625667099697000&source=images&cd=vfe&ved=0CAoQjRxqFwoTCJibvavQzvECFQAAAAAdAAAAABAE"
+        value="{{ recipe.image_url }} "
         required
       />
     </div>

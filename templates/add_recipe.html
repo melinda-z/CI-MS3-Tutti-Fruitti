@@ -22,7 +22,7 @@
         <option value="" disabled selected>Choose Category</option>
         {% for category in categories %}
         <option value="{{ category.category_name }}">
-          {{ category.category_name }}
+          {{- category.category_name -}}
         </option>
         {% endfor %}
       </select>
@@ -82,8 +82,6 @@
         placeholder=" Method"
         required
       ></textarea>
-      <ul id="step-list"></ul>
-      <button type="button" class="btn-small" id="add-steps">Add steps</button>
     </div>
   </div>
   <!-- Smoothie image url -->

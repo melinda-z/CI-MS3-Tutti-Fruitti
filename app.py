@@ -32,6 +32,13 @@ def all_recipes():
 @app.route(("/full_recipe/<recipe_id>"))
 def full_recipe(recipe_id):
     recipe = mongo.db.recipes.find_one({"_id": ObjectId(recipe_id)})
+    try:
+        category = mongo.db.categories.find_one({"_id": recipe["category_name"]})
+        user = mongo.db.users.find_one({"_id": recipe["created_by"]})
+        recipe["category_name"] = category["category_name"]
+        recipe["created_by"] = user["username"]
+    except Exception():
+        pass
     return render_template("full_recipe.html", recipe=recipe)
 
 
