@@ -31,10 +31,12 @@ def all_recipes():
 
 @app.route(("/full_recipe/<recipe_id>"))
 def full_recipe(recipe_id):
-    recipe = mongo.db.recipes.find_one({"_id": ObjectId(recipe_id)})
     try:
+        # assign _id with relative key name
+        recipe = mongo.db.recipes.find_one({"_id": ObjectId(recipe_id)})
         category = mongo.db.categories.find_one({"_id": recipe["category_name"]})
         user = mongo.db.users.find_one({"_id": recipe["created_by"]})
+        # reassign key name to readable category&user name
         recipe["category_name"] = category["category_name"]
         recipe["created_by"] = user["username"]
     except Exception():
@@ -46,7 +48,8 @@ def full_recipe(recipe_id):
 def my_recipes(username):
     # grab the session user's username from db
     username = mongo.db.users.find_one({"username": session["user"]})["username"]
-    recipes = list(mongo.db.recipes.find())
+    user = mongo.db.users.find_one({"username": session["user"]})
+    recipes = list(mongo.db.recipes.find({"created_by": ObjectId(user["_id"])}))
     if session["user"]:
         return render_template("my_recipes.html", username=username, recipes=recipes)
 
@@ -165,6 +168,13 @@ def edit_recipe(recipe_id):
     recipe = mongo.db.recipes.find_one({"_id": ObjectId(recipe_id)})
     categories = mongo.db.categories.find().sort("category_name", 1)
     return render_template("edit_recipe.html", recipe=recipe, categories=categories)
+
+
+@app.route("/delete_recipe/<recipe_id>")
+def delete_recipe(recipe_id):
+    mongo.db.recipes.remove({"_id": ObjectId(recipe_id)})
+    flash("Recipe Successfully Deleted")
+    return redirect(url_for("my_recipes", username=session["user"]))
 
 
 if __name__ == "__main__":

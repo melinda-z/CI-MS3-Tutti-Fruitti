@@ -80,7 +80,9 @@
             >My recipes</a
           >
         </li>
+        {% if session.user|lower == "admin"|lower %}
         <li><a href="#">Manage Categories</a></li>
+        {% endif%}
         <li><a href="{{ url_for('log_out') }}">Log Out</a></li>
         {% else %}
         <li><a href="{{ url_for('log_in') }}">Log In</a></li>
