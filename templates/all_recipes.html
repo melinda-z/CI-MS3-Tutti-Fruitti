@@ -41,13 +41,35 @@
     </ul>
   </div>
 </section>
-<section class="search-bar"></section>
+<section class="search-bar">
+  <div class="row teal lighten-4">
+    <form action="{{ url_for('search') }}" method="POST" class="col s12">
+      <div class="row center-align">
+        <div class="input-field col s12 m8">
+          <i class="fas fa-search prefix"></i>
+          <input
+            type="text"
+            name="query"
+            id="query"
+            minlength="3"
+            class="validate"
+            required
+          />
+          <label for="query">Search Recipes</label>
+        </div>
+        <div class="col s12 m4 btn-margin">
+          <a href="{{ url_for('all_recipes') }}" class="btn-small">Reset</a>
+          <button type="submit" class="btn-small">Search</button>
+        </div>
+      </div>
+    </form>
+  </div>
+</section>
 
 <section class="recipes">
   <!-- * recipes display image overlay ref: W3school
  https://www.w3schools.com/howto/howto_css_image_overlay_icon.asp */ -->
-
-  {% for recipe in recipes %}
+  {% if recipes|length >0 %} {% for recipe in recipes %}
   <div class="recipe-container">
     <img
       src="{{ recipe.image_url }}"
@@ -72,6 +94,8 @@
       {% endif %}
     </div>
   </div>
-  {% endfor %}
+  {% endfor %} {% else%}
+  <h5 class="center-align">No Results Found</h5>
+  {% endif%}
 </section>
 {% endblock %}

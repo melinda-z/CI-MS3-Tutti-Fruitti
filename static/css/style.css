@@ -292,3 +292,6 @@ lays on top of the container and over the image */
     font-size: 1.2rem;
   }
 }
+.btn-margin {
+  margin: auto;
+}

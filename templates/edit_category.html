@@ -1,0 +1,38 @@
+{% extends "base.html" %} {% block content %}
+<h3 class="center-align">Edit Category</h3>
+<!-- Upload Recipe form -->
+<form
+  id="add-recipe-form"
+  class="container col s12 m6 card-color"
+  method="POST"
+  action="{{ url_for('edit_category', category_id=category._id )}}"
+>
+  <!-- Add category -->
+  <div class="row">
+    <label class="col s1" for="category_name"
+      ><img src="{{url_for('static', filename='img/category.png') }}" alt=""
+    /></label>
+    <div class="col s11">
+      <input
+        class="validate"
+        id="category_name"
+        name="category_name"
+        value=" {{ category.category_name }}"
+        placeholder="Category Name"
+        type="text"
+        minlength="3"
+        maxlength="25"
+        required
+      />
+    </div>
+  </div>
+  <div class="row">
+    <a href="{{ url_for('get_categories') }}" class="btn-small"
+      >Cancel <i class="fas fa-times-circle"></i
+    ></a>
+    <button class="btn-small" type="submit">
+      Edit <i class="fas fa-edit"></i>
+    </button>
+  </div>
+</form>
+{% endblock %}
