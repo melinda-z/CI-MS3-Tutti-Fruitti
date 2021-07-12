@@ -146,7 +146,7 @@ def add_recipe():
     return render_template("add_recipe.html", categories=categories)
 
 
-@app.route("/edit_recipe/<recipe_id>", methods=["POST", "GET"])
+@app.route("/edit_recipe/<recipe_id>", methods=["GET", "POST"])
 def edit_recipe(recipe_id):
     if request.method == "POST":
         user = mongo.db.users.find_one({"username": session["user"]})
@@ -181,6 +181,17 @@ def delete_recipe(recipe_id):
 def get_categories():
     categories = list(mongo.db.categories.find().sort("category_name", 1))
     return render_template("categories.html", categories=categories)
+
+
+@app.route("/add_category", methods=["GET", "POST"])
+def add_category():
+    if request.method == "POST":
+        category = {"category_name": request.form.get("category_name")}
+        mongo.db.categories.insert_one(category)
+        flash("New Category Added")
+        return redirect(url_for("get_categories"))
+
+    return render_template("add_category.html")
 
 
 if __name__ == "__main__":

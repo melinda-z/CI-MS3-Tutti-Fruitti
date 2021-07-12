@@ -1,6 +1,13 @@
 {% extends "base.html" %} {% block content %}
 <h4 class="center-align">Manage Categories</h4>
 <div class="row">
+  <div class="col s12 center-align">
+    <a href="{{ url_for('add_category') }}" class="btn-small"
+      >Add category <i class="fas fa-plus-square right"></i
+    ></a>
+  </div>
+</div>
+<div class="row">
   {% for category in categories%}
   <div class="col s12 m6">
     <div class="card teal lighten-4">

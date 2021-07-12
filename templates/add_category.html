@@ -1,0 +1,34 @@
+{% extends "base.html" %} {% block content %}
+<h3 class="center-align">Add Category</h3>
+<!-- Upload Recipe form -->
+<form
+  id="add-recipe-form"
+  class="container col s12 m6 card-color"
+  method="POST"
+  action="{{ url_for('add_category') }}"
+>
+  <!-- Add category -->
+  <div class="row">
+    <label class="col s1" for="category_name"
+      ><img src="{{url_for('static', filename='img/category.png') }}" alt=""
+    /></label>
+    <div class="col s11">
+      <input
+        class="validate"
+        id="category_name"
+        name="category_name"
+        placeholder="Category Name"
+        type="text"
+        minlength="3"
+        maxlength="25"
+        required
+      />
+    </div>
+  </div>
+  <div class="row">
+    <button class="btn-small" type="submit">
+      Add <i class="fas fa-plus-square"></i>
+    </button>
+  </div>
+</form>
+{% endblock %}
