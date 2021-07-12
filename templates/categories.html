@@ -1,0 +1,18 @@
+{% extends "base.html" %} {% block content %}
+<h4 class="center-align">Manage Categories</h4>
+<div class="row">
+  {% for category in categories%}
+  <div class="col s12 m6">
+    <div class="card teal lighten-4">
+      <div class="card-content white-text">
+        <span class="card-title">{{ category.category_name }}</span>
+      </div>
+      <div class="card-action">
+        <a class="btn-small" href="#">Edit</a>
+        <a class="btn-small" href="#">Delete</a>
+      </div>
+    </div>
+  </div>
+  {% endfor %}
+</div>
+{% endblock%}
