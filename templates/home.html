@@ -1,10 +1,17 @@
 {% extends "base.html" %} {% block content %}
+<!-- neon font  -->
+<!-- https://codepen.io/FelixRilling/pen/qzfoc -->
+<section>
+  <p class="center-align">
+    <span> Start This Summer With a Blast </span>
+  </p>
+</section>
+<!-- home page image grid -->
 <section>
   <div class="row">
     <div id="column-1" class="column">
       <img src="static/img/smoothie-1.jpg" />
       <img src="static/img/smoothie-14.jpg" />
-
       <img src="static/img/smoothie-4.jpg" />
     </div>
 
@@ -20,17 +27,42 @@
 
     <div id="column-4" class="column">
       <img src="static/img/smoothie-13.jpg" />
-
       <img src="static/img/smoothie-9.jpg" />
     </div>
   </div>
 </section>
+<!-- member benefit -->
 <section>
-  <p class="fact">
-    Smoothies are full of nutrients and flavor. They are an essential part of
-    the best breakfast in Edmond, as they provide a power-packed start for the
-    day. A lot of protein along with many nutrients subdue food cravings and
-    keep you away from eating junk food.
-  </p>
+  <div class="sub-title">
+    <h3 class="center-align">Try our awesome smoothie recipes!</h3>
+    <h4 class="center-align">Sign Up For Free!</h4>
+  </div>
+  <div class="row container">
+    <div class="col s12 m6">
+      <div class="card-panel teal lighten-4 card">
+        <h6>Discover Smoothies Recipes</h6>
+        <i class="fas fa-plus-square benefit-icon"></i>
+        <p>
+          Discover new smoothies recipes in different categories uploaded by
+          Tutti Fruitti Users!
+        </p>
+      </div>
+    </div>
+    <div class="col s12 m6">
+      <div class="card-panel teal lighten-4 card">
+        <h6>Create You Own Recipes</h6>
+        <i class="fas fa-blender benefit-icon"></i>
+        <p>
+          Upload your own smoothie recipes and share your favourite smoothie
+          with our community!
+        </p>
+      </div>
+    </div>
+  </div>
+  <div class="col s12 center-align">
+    <a class="btn-small" id="home-btn" href="{{ url_for('register') }}"
+      >Sign Up</a
+    >
+  </div>
 </section>
 {% endblock %}
