@@ -41,6 +41,7 @@
     </ul>
   </div>
 </section>
+<!-- search bar -->
 <section class="search-bar">
   <div class="row teal lighten-4">
     <form action="{{ url_for('search') }}" method="POST" class="col s12">
@@ -65,7 +66,7 @@
     </form>
   </div>
 </section>
-
+<!-- display all recipes  -->
 <section class="recipes">
   <!-- * recipes display image overlay ref: W3school
  https://www.w3schools.com/howto/howto_css_image_overlay_icon.asp */ -->
@@ -94,9 +95,8 @@
       {% endif %}
     </div>
   </div>
-  {% endfor %} {% else%}
+  {% endfor %} {% else %}
   <h5 class="center-align">No Results Found</h5>
   {% endif%}
 </section>
-
 {% endblock %}
