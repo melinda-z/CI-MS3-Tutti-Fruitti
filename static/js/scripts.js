@@ -78,9 +78,7 @@ const add = document.getElementById("add");
 const input = document.getElementById("new-ingredient");
 const ingredientList = document.getElementById("ingredients-list");
 
-function inputLength() {
-  return input.value.length;
-}
+
 // create another input field after adding one ingredient
 function createInput() {
   var newInput = document.createElement("input");
@@ -101,14 +99,6 @@ function createInput() {
   }
   deleteButton.addEventListener("click", deleteInput);
 }
-
-function addListAfterClick() {
-  if (inputLength() > 0) {
-    createInput();
-  }
-}
-
-add.addEventListener("click", addListAfterClick);
 
 // Edit Recipe functionality
 function delete_existing_ingredient(event) {
@@ -132,3 +122,14 @@ for (var i = 0; i < delete_ingredient_buttons.length; i++) {
 function goBack() {
   window.history.back();
 }
+// Get the modal
+var modal = document.getElementById("id01");
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function (event) {
+  
+  if (event.target == modal) {
+    modal.style.display = "none";
+    console.log("1")
+  }
+};
