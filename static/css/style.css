@@ -1,4 +1,6 @@
-/* Utility */
+/* UTILITY */
+
+/* Font */
 @import url("https://fonts.googleapis.com/css2?family=Zen+Tokyo+Zoo&display=swap");
 
 * {
@@ -46,7 +48,7 @@ h6 {
   line-height: 2;
 }
 
-/* home page */
+/* HOME PAGE */
 nav .nav-wrapper {
   padding-top: 20px;
 }
@@ -92,6 +94,8 @@ p span:hover {
       0 0 35px #ff9900, 0 0 40px #ff9900, 0 0 50px #ff9900, 0 0 75px #ff9900;
   }
 }
+/* end of source code */
+
 .card {
   height: 90%;
   min-width: 120px;
@@ -133,7 +137,7 @@ p span:hover {
   width: 100%;
 }
 
-/* register/log in page */
+/* REGISTER & LOG IN PAGE */
 .card-color {
   background-color: RGB(253, 255, 182, 0.5);
 }
@@ -141,7 +145,7 @@ p span:hover {
   background-color: #b2ebf2;
 }
 
-/* recipes page */
+/* ALL RECIPES PAGE */
 .recipes {
   display: flex;
   flex-wrap: wrap;
@@ -152,8 +156,9 @@ p span:hover {
 .recipe-name {
   margin-top: 40px;
 }
+
 /* recipes display image overlay ref: W3school
- https://www.w3schools.com/howto/howto_css_image_overlay_icon.asp */
+  https://www.w3schools.com/howto/howto_css_image_overlay_icon.asp */
 
 .recipe-container {
   position: relative;
@@ -207,14 +212,47 @@ lays on top of the container and over the image */
 .fa-user:hover {
   color: #eee;
 }
+/* end of source code */
 
-/* My recipes page */
+/* MY RECIPES PAGE */
 .add_recipe {
   margin: 50px;
 }
+/* confirm deletion message modal */
+#id01 {
+  display: none;
+  background-color: #b2ebf2;
+  position: fixed;
+  left: 20%;
+  top: 20%;
+  z-index: 1;
+  width: 50%;
+  height: auto;
+  padding-top: 0;
+  padding: 20px;
+}
+.confirm-content {
+  padding-top: 0;
+}
+.close {
+  font-size: 20px;
+  font-weight: bold;
+  color: #f1f1f1;
+}
+.close:hover,
+.close:focus {
+  color: #f44336;
+  cursor: pointer;
+}
+.delete {
+  background-color: #f44336;
+  margin: 5px;
+}
+.cancel {
+  margin: 5px;
+}
 
-/* Add recipe page */
-
+/* ADD RECIPE PAGE */
 ::placeholder {
   color: #000;
 }
@@ -234,7 +272,8 @@ lays on top of the container and over the image */
   padding: 20px;
   margin-bottom: 40px;
 }
-/* full recipe page */
+
+/* FULL RECIPE PAGE */
 .flex-wrapper {
   display: flex;
   margin: 30px;
@@ -246,7 +285,8 @@ lays on top of the container and over the image */
 .flex-items {
   margin: 50px;
 }
-/* Responsive layout  */
+
+/* RESPONSIVE LAYOUT  */
 @media screen and (max-width: 800px) {
   .column {
     flex: 50%;
@@ -286,10 +326,13 @@ lays on top of the container and over the image */
   }
 
   h3 {
-    font-size: 1.4rem;
+    font-size: 1.5rem;
   }
   h5 {
-    font-size: 1.5rem;
+    font-size: 1.4rem;
+  }
+  h4 {
+    font-size: 1.2rem;
   }
   h6 {
     font-size: 1rem;
@@ -299,6 +342,11 @@ lays on top of the container and over the image */
     width: 30px;
     height: auto;
     margin-right: 20px;
+  }
+}
+@media screen and (max-width: 414px) {
+  p:nth-child(1) span {
+    font-size: 3rem;
   }
 }
 @media screen and (max-width: 414px) {
@@ -321,6 +369,9 @@ lays on top of the container and over the image */
   .cancel-btn {
     font-size: 10px;
   }
+  p:nth-child(1) span {
+    font-size: 2rem;
+  }
 }
 @media screen and (max-width: 335px) {
   label img {
@@ -338,37 +389,4 @@ lays on top of the container and over the image */
 .btn-margin,
 .cancel-btn {
   margin: auto;
-}
-#id01 {
-  display: none;
-  background-color: #b2ebf2;
-  position: fixed;
-  left: 20%;
-  top: 20%;
-  z-index: 1;
-  width: 50%;
-  height: auto;
-  padding-top: 0;
-  padding: 20px;
-}
-.confirm-content {
-  padding-top: 0;
-}
-.close {
-  font-size: 20px;
-  font-weight: bold;
-  color: #f1f1f1;
-}
-
-.close:hover,
-.close:focus {
-  color: #f44336;
-  cursor: pointer;
-}
-.delete {
-  background-color: #f44336;
-  margin: 5px;
-}
-.cancel {
-  margin: 5px;
 }
