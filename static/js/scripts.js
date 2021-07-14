@@ -74,7 +74,6 @@ $(document).ready(function () {
 });
 
 // Add ingredient input functionality
-const add = document.getElementById("add");
 const input = document.getElementById("new-ingredient");
 const ingredientList = document.getElementById("ingredients-list");
 
@@ -122,14 +121,4 @@ for (var i = 0; i < delete_ingredient_buttons.length; i++) {
 function goBack() {
   window.history.back();
 }
-// Get the modal
-var modal = document.getElementById("id01");
 
-// When the user clicks anywhere outside of the modal, close it
-window.onclick = function (event) {
-  
-  if (event.target == modal) {
-    modal.style.display = "none";
-    console.log("1")
-  }
-};

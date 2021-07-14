@@ -339,3 +339,36 @@ lays on top of the container and over the image */
 .cancel-btn {
   margin: auto;
 }
+#id01 {
+  display: none;
+  background-color: #b2ebf2;
+  position: fixed;
+  left: 20%;
+  top: 20%;
+  z-index: 1;
+  width: 50%;
+  height: auto;
+  padding-top: 0;
+  padding: 20px;
+}
+.confirm-content {
+  padding-top: 0;
+}
+.close {
+  font-size: 20px;
+  font-weight: bold;
+  color: #f1f1f1;
+}
+
+.close:hover,
+.close:focus {
+  color: #f44336;
+  cursor: pointer;
+}
+.delete {
+  background-color: #f44336;
+  margin: 5px;
+}
+.cancel {
+  margin: 5px;
+}
