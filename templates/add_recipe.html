@@ -62,7 +62,9 @@
         placeholder=" Ingredient"
         required
       />
-      <button type="button" class="btn-small" id="add" onclick="createInput()">Add Ingredient</button>
+      <button type="button" class="btn-small" id="add" onclick="createInput()">
+        Add Ingredient
+      </button>
       <ul id="ingredients-list" name="ingredients-list"></ul>
     </div>
   </div>
@@ -89,14 +91,21 @@
     <label class="col s1" for="image_url"
       ><img src="{{url_for('static', filename='img/image.png') }}" alt=""
     /></label>
-    <div class="col s11">
+    <div class="col s10">
       <input
         id="image_url"
         name="image_url"
         type="text"
-        value="https://www.multi-fresh.net/wp-content/uploads/2020/06/shutterstock_182683421-360x262.jpg"
+        value="Image URL"
         required
       />
+    </div>
+    <div class="col s1">
+      <i
+        class="fas fa-question-circle tooltipped"
+        data-position="top"
+        data-tooltip="Find an image online. Right click, copy image address and paste the link here."
+      ></i>
     </div>
   </div>
   <div class="row btn-container">

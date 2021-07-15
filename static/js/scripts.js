@@ -3,6 +3,7 @@ $(document).ready(function () {
   $(".sidenav").sidenav({ edge: "right" });
   $(".slider").slider();
   $("select").formSelect();
+  $(".tooltipped").tooltip();
   // fix materilize form validation issue
   validateMaterializeSelect();
   function validateMaterializeSelect() {
@@ -77,7 +78,6 @@ $(document).ready(function () {
 const input = document.getElementById("new-ingredient");
 const ingredientList = document.getElementById("ingredients-list");
 
-
 // create another input field after adding one ingredient
 function createInput() {
   var newInput = document.createElement("input");
@@ -121,4 +121,3 @@ for (var i = 0; i < delete_ingredient_buttons.length; i++) {
 function goBack() {
   window.history.back();
 }
-

@@ -30,7 +30,10 @@ def home():
 
 # ALL RECIPES PAGE
 # Pagination
-PER_PAGE = 2
+# https://gist.github.com/mozillazg/69fb40067ae6d80386e10e105e6803c9
+# https://stackoverflow.com/questions/27992413/how-do-i-calculate-the-offsets-for-pagination/27992616
+
+PER_PAGE = 12
 
 
 def paginate(recipes):
