@@ -3,7 +3,6 @@ from flask import Flask, flash, render_template, redirect, request, session, url
 from flask_pymongo import PyMongo
 from bson.objectid import ObjectId
 from werkzeug.security import generate_password_hash, check_password_hash
-
 from flask_paginate import Pagination, get_page_args
 
 if os.path.exists("env.py"):
@@ -33,7 +32,7 @@ def home():
 # https://gist.github.com/mozillazg/69fb40067ae6d80386e10e105e6803c9
 # https://stackoverflow.com/questions/27992413/how-do-i-calculate-the-offsets-for-pagination/27992616
 
-PER_PAGE = 12
+PER_PAGE = 6
 
 
 def paginate(recipes):
@@ -83,7 +82,16 @@ def search():
     """
     query = request.form.get("query")
     recipes = list(mongo.db.recipes.find({"$text": {"$search": query}}))
-    return render_template("all_recipes.html", recipes=recipes)
+
+    paginated_recipes = paginate(recipes)
+    pagination = pagination_args(recipes)
+
+    return render_template(
+        "all_recipes.html",
+        recipes=paginated_recipes,
+        pagination=pagination,
+        query=query,
+    )
 
 
 # FULL RECIPE PAGE
@@ -188,8 +196,18 @@ def my_recipes(username):
     # only display recipes created by current user
     user = mongo.db.users.find_one({"username": session["user"]})
     recipes = list(mongo.db.recipes.find({"created_by": ObjectId(user["_id"])}))
+
+    # Pagination
+    paginated_recipes = paginate(recipes)
+    pagination = pagination_args(recipes)
+
     if session["user"]:
-        return render_template("my_recipes.html", username=username, recipes=recipes)
+        return render_template(
+            "my_recipes.html",
+            username=username,
+            recipes=paginated_recipes,
+            pagination=pagination,
+        )
 
     return redirect(url_for("log_in"))
 
