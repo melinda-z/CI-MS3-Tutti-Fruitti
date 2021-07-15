@@ -1,0 +1,19 @@
+{% extends "base.html" %} {% block content %}
+
+<div class="error-handler">
+  <div class="row">
+    <div class="col s12 m8 offset-m2 l6 offset-l3">
+      <h3>Oops!</h3>
+      <p>This page doen't exist!</p>
+      <p>But don't worry, we will send you back!</p>
+      <a class="btn-small" href="{{ url_for('home')}}">Home</a>
+    </div>
+  </div>
+  <div>
+    <img
+      src="{{url_for ('static', filename='images/logo.png')}}"
+      alt="smoothie-container"
+    />
+  </div>
+</div>
+{% endblock %}

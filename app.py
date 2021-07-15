@@ -330,5 +330,31 @@ def delete_category(category_id):
     return redirect(url_for("get_categories"))
 
 
+# Error handling
+# https://flask.palletsprojects.com/en/2.0.x/errorhandling/
+@app.errorhandler(403)
+def forbidden(e):
+    """
+    403 error handler
+    """
+    return render_template("403.html"), 403
+
+
+@app.errorhandler(404)
+def page_not_found(e):
+    """
+    404 error handler
+    """
+    return render_template("404.html"), 404
+
+
+@app.errorhandler(500)
+def internal_server_error(e):
+    """
+    500 error handler
+    """
+    return render_template("errors/500.html"), 500
+
+
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"), port=int(os.environ.get("PORT")), debug=True)

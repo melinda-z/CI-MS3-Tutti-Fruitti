@@ -12,7 +12,7 @@ MarkupSafe = "==2.0.1"
 Werkzeug = "==2.0.1"
 flask-pymongo = "*"
 dnspython = "*"
-flask-paginate==0.8.1
+flask-paginate = "*"
 
 [dev-packages]
 
