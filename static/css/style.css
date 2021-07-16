@@ -219,18 +219,6 @@ lays on top of the container and over the image */
   margin: 50px;
 }
 /* confirm deletion message modal */
-#id01 {
-  display: none;
-  background-color: #b2ebf2;
-  position: fixed;
-  left: 20%;
-  top: 20%;
-  z-index: 1;
-  width: 50%;
-  height: auto;
-  padding-top: 0;
-  padding: 20px;
-}
 .confirm-content {
   padding-top: 0;
 }

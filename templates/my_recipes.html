@@ -32,17 +32,32 @@
       <a
         id="delete-recipe"
         class="icon"
-        onclick="document.getElementById('id01').style.display='block'"
+        onclick="document.getElementById('delete_recipe{{recipe._id}}').style.display='block'"
       >
         <i class="fas fa-trash-alt"> Delete</i>
       </a>
     </div>
     <!-- Confirm deletion message  modal -->
     <!-- https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_delete_modal -->
-    <div id="id01" class="confirm">
+    <div
+      class="confirm"
+      id="delete_recipe{{recipe._id}}"
+      style="
+        display: none;
+        background-color: #b2ebf2;
+        position: fixed;
+        left: 20%;
+        top: 20%;
+        z-index: 1;
+        width: 50%;
+        height: auto;
+        padding-top: 0;
+        padding: 20px;
+      "
+    >
       <form class="confirm-content">
         <span
-          onclick="document.getElementById('id01').style.display='none'"
+          onclick="document.getElementById('delete_recipe{{recipe._id}}').style.display='none'"
           class="close"
           title="Close Modal"
           >&times;</span
