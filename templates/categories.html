@@ -21,7 +21,7 @@
           >Edit</a
         >
         <a
-          onclick="document.getElementById('id01').style.display='block'"
+          onclick="document.getElementById('delete_category{{category._id}}').style.display='block'"
           class="btn-small delete"
           >Delete</a
         >
@@ -30,10 +30,25 @@
   </div>
   <!-- Confirm deletion message  modal -->
   <!-- https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_delete_modal -->
-  <div id="id01" class="confirm">
+  <div
+    id="delete_category{{category._id}}"
+    class="confirm"
+    style="
+      display: none;
+      background-color: #b2ebf2;
+      position: fixed;
+      left: 20%;
+      top: 20%;
+      z-index: 1;
+      width: 50%;
+      height: auto;
+      padding-top: 0;
+      padding: 20px;
+    "
+  >
     <form class="confirm-content">
       <span
-        onclick="document.getElementById('id01').style.display='none'"
+        onclick="document.getElementById('delete_category{{category._id}}').style.display='none'"
         class="close"
         title="Close Modal"
         >&times;</span
