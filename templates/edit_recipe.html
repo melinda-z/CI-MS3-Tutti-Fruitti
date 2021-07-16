@@ -10,7 +10,10 @@
   <!-- Edit smoothie category  -->
   <div class="row">
     <label class="col s1">
-      <img src="{{url_for('static', filename='img/category.png') }}" alt="" />
+      <img
+        src="{{url_for('static', filename='img/category.png') }}"
+        alt="list-items"
+      />
     </label>
     <div class="col s11">
       <select
@@ -22,8 +25,8 @@
         <option value="" disabled>Choose Category</option>
         {% for category in categories %} {% if category.category_name ==
         recipe.category_name %}
-        <option value="{{ category.category_name }} selected">
-          {{-category.category_name-}}
+        <option value="{{ recipe.category_name }} selected">
+          {{-recipe.category_name-}}
         </option>
         {% else %}
         <option value="{{ category.category_name }}">
@@ -36,7 +39,9 @@
   <!-- Edit Smoothie name -->
   <div class="row">
     <label class="col s1" for="smoothie_name"
-      ><img src="{{url_for('static', filename='img/name.png') }}" alt=""
+      ><img
+        src="{{url_for('static', filename='img/name.png') }}"
+        alt="juice-and-fruit"
     /></label>
     <div class="col s11">
       <input
@@ -55,19 +60,24 @@
   <!-- Edit ingredients -->
   <div class="row">
     <label class="col s1" for="new-ingredient"
-      ><img src="{{url_for('static', filename='img/ingredients.png') }}" alt=""
+      ><img
+        src="{{url_for('static', filename='img/ingredients.png') }}"
+        alt="basket-of-ingredients"
     /></label>
     <div class="col s11">
       <input
         class="validate"
         id="new-ingredient"
-        name="new-ingredient "
+        name="new-ingredient"
         type="text"
         minlength="5"
-        maxlength="50"
+        maxlength="60"
         placeholder="Ingredient"
+        disabled
       />
-      <button type="button" class="btn-small" id="add">Add Ingredient</button>
+      <button type="button" class="btn-small" id="add" onclick="createInput()">
+        Add Ingredient
+      </button>
       <ul id="ingredients-list" name="ingredients-list">
         {% for ingredient in recipe.ingredients %}
         <!-- recreate input field to loop through each ingredient for display -->
@@ -75,7 +85,8 @@
           class="validate"
           type="text"
           minlength="5"
-          maxlength="50"
+          maxlength="60"
+          name="new-ingredient"
           value="{{ ingredient }}"
           placeholder=" Ingredient"
           id="ingredient_{{loop.index}}"
@@ -96,17 +107,19 @@
   <!-- Edit method -->
   <div class="row">
     <label class="col s1" for="method"
-      ><img src="{{url_for('static', filename='img/method.png') }}" alt=""
+      ><img
+        src="{{url_for('static', filename='img/method.png') }}"
+        alt="cooking-pot"
     /></label>
     <div class="col s11">
       <textarea
         class="materialize-textarea validate"
-        id="method "
-        name="method "
+        id="method"
+        name="method"
         type="text"
         minlength="5"
-        maxlength="200"
-        placeholder=" Method"
+        maxlength="250"
+        placeholder="Method"
         required
       >
 {{ recipe.method }}</textarea
@@ -116,7 +129,7 @@
   <!--  Edit Smoothie image url -->
   <div class="row">
     <label class="col s1" for="image_url"
-      ><img src="{{url_for('static', filename='img/image.png') }}" alt=""
+      ><img src="{{url_for('static', filename='img/image.png') }}" alt="photo"
     /></label>
     <div class="col s11">
       <input
@@ -131,14 +144,14 @@
   <!-- submit button -->
   <div class="row btn-container">
     <a
-      href="{{ url_for('all_recipes') }}"
+      href="{{ url_for('my_recipes',username=session['user']) }}"
       class="btn-small cancel-btn"
       type="submit"
     >
       Cancel <i class="fas fa-times-circle"></i>
     </a>
     <button class="btn-small add-btn" type="submit">
-      Edit <i class="fas fa-edit"></i>
+      Update <i class="fas fa-edit"></i>
     </button>
   </div>
 </form>

@@ -99,7 +99,7 @@ function createInput() {
   deleteButton.addEventListener("click", deleteInput);
 }
 
-// Edit Recipe functionality
+// delete existing ingredients functionality
 function delete_existing_ingredient(event) {
   // target the ingredient to be deleted
   ingredient_to_delete = event.target.getAttribute("data-ingredient-id");

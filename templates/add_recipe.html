@@ -10,7 +10,10 @@
   <!-- Select smoothie category  -->
   <div class="row">
     <label class="col s1">
-      <img src="{{url_for('static', filename='img/category.png') }}" alt="" />
+      <img
+        src="{{url_for('static', filename='img/category.png') }}"
+        alt="list-items"
+      />
     </label>
     <div class="col s11">
       <select
@@ -31,7 +34,9 @@
   <!-- Smoothie name -->
   <div class="row">
     <label class="col s1" for="smoothie_name"
-      ><img src="{{url_for('static', filename='img/name.png') }}" alt=""
+      ><img
+        src="{{url_for('static', filename='img/name.png') }}"
+        alt="juice-and-fruit"
     /></label>
     <div class="col s11">
       <input
@@ -49,7 +54,9 @@
   <!-- Smoothies ingredients -->
   <div class="row">
     <label class="col s1" for="new-ingredient"
-      ><img src="{{url_for('static', filename='img/ingredients.png') }}" alt=""
+      ><img
+        src="{{url_for('static', filename='img/ingredients.png') }}"
+        alt="basket-of-ingredients"
     /></label>
     <div class="col s11">
       <input
@@ -58,8 +65,8 @@
         name="new-ingredient"
         type="text"
         minlength="5"
-        maxlength="50"
-        placeholder=" Ingredient"
+        maxlength="60"
+        placeholder="Ingredient"
         required
       />
       <button type="button" class="btn-small" id="add" onclick="createInput()">
@@ -71,7 +78,9 @@
   <!-- Smoothie method -->
   <div class="row">
     <label class="col s1" for="method"
-      ><img src="{{url_for('static', filename='img/method.png') }}" alt=""
+      ><img
+        src="{{url_for('static', filename='img/method.png') }}"
+        alt="cooking-pot"
     /></label>
     <div class="col s11">
       <textarea
@@ -81,7 +90,7 @@
         type="text"
         minlength="5"
         maxlength="250"
-        placeholder=" Method"
+        placeholder="Method"
         required
       ></textarea>
     </div>
@@ -89,7 +98,7 @@
   <!-- Smoothie image url -->
   <div class="row">
     <label class="col s1" for="image_url"
-      ><img src="{{url_for('static', filename='img/image.png') }}" alt=""
+      ><img src="{{url_for('static', filename='img/image.png') }}" alt="photo"
     /></label>
     <div class="col s10">
       <input

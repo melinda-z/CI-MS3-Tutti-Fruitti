@@ -264,7 +264,8 @@ def edit_recipe(recipe_id):
         category = mongo.db.categories.find_one(
             {"category_name": request.form.get("category_name")}
         )
-        submit = {
+
+        update_recipe = {
             "category_name": ObjectId(category["_id"]),
             "smoothie_name": request.form.get("smoothie_name"),
             "ingredients": request.form.getlist("new-ingredient"),
@@ -272,7 +273,8 @@ def edit_recipe(recipe_id):
             "image_url": request.form.get("image_url"),
             "created_by": ObjectId(user["_id"]),
         }
-        mongo.db.recipes.update({"_id": ObjectId(recipe_id)}, submit)
+
+        mongo.db.recipes.update({"_id": ObjectId(recipe_id)}, update_recipe)
         flash("Recipe Successfully Updated")
         return redirect(url_for("my_recipes", username=session["user"]))
 

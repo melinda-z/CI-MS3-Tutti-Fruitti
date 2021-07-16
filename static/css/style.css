@@ -265,6 +265,7 @@ lays on top of the container and over the image */
 .flex-wrapper {
   display: flex;
   margin: 30px;
+  word-break: break-word;
 }
 .recipe-img {
   width: 20vw;
@@ -273,7 +274,9 @@ lays on top of the container and over the image */
 .flex-items {
   margin: 50px;
 }
-
+#recipe-info {
+  overflow-wrap: break-word;
+}
 /* RESPONSIVE LAYOUT  */
 @media screen and (max-width: 800px) {
   .column {
