@@ -221,7 +221,39 @@ As a site owner, I can have the option to edit or delete the existing categories
 
   - The language used to implement the site's interactive features, allow the users to be interactive and make actions during their visit.
 
-### **Frameworks, Libraries & Programs Used**
+- [Python3](https://www.python.org/downloads/)
+
+  - The language used to implement all backend functionalities.
+
+### **Frameworks & Libraries**
+
+- [Flask](https://flask.palletsprojects.com/en/1.1.x/)
+
+- [Flask-PyMongo](https://pypi.org/project/Flask-PyMongo/)
+
+- [pipenv](https://pipenv.pypa.io/en/latest/)
+
+- [dnspython](https://www.dnspython.org/)
+
+- [jQuery](https://jquery.com/)
+
+- [Flask Paginate](https://pythonhosted.org/Flask-paginate/)
+
+- [ninja](https://jinja.palletsprojects.com/en/3.0.x/)
+
+- [Materialize](https://materializecss.com/)
+
+- [werkzeug](https://werkzeug.palletsprojects.com/en/2.0.x/)
+
+### **Other Programs Used**
+
+- [Heroku](https://id.heroku.com/login)
+
+  - Heroku used for hosting the live site.
+
+- [MongoDB](https://www.mongodb.com/)
+
+  - MongoDB used to host database information.
 
 - [VScode](https://code.visualstudio.com/)
 
@@ -249,6 +281,10 @@ As a site owner, I can have the option to edit or delete the existing categories
 
   - The wireframes were created using Balsamiq.
 
+- [Random Key Generator](https://randomkeygen.com/)
+
+  - used to create a stronger password for required <SECRET_KEY>.
+
 - [Google DevTools](https://developer.chrome.com/docs/devtools/)
 
   - Google DevTools was extensively used throughout the project for various styling, testing and debugging purposes.
@@ -273,11 +309,83 @@ As a site owner, I can have the option to edit or delete the existing categories
 
   - coolors has been used to decide the color scheme for the site.
 
+- [Light House](https://developers.google.com/web/tools/lighthouse)
+
+  - used for performance report.
+
+- [Responsive Viewer](https://chrome.google.com/webstore/detail/responsive-viewer/inmopeiepgfljkpkidclfgbgbmfcennb?hl=en)
+
+  - used for testing site responsiveness.
+
+- [Lucidchart](https://www.lucidchart.com/)
+
+  - used for document database schema and visual navigation system.
+
 ## **Testing**
 
 Testing information can be found in a seperate file [testing.md](testing.md)
 
 ## **Deployment**
+
+### **Heroku Deployment**
+
+I deployed this project to heroku using the following steps:
+
+#### **Create Flask Application**
+
+- Log into Heruko
+- Under dashboard, Select "Create New App"
+- Choose an app name (it shows in red if the name is already taken)
+- select a region base on your location
+- click "Create app"
+
+#### **Create Github Repository**
+
+- Log into Github
+- Click the green "new" button under the main dashboard
+- Choose a name
+- Select "Add a README file"
+- Click "Create repository"
+
+#### **Environmentals File**
+
+Create an env.py file using the following information:
+
+`import os`
+
+`os.environ.setdefault("IP", "0.0.0.0") os.environ.setdefault("PORT", "5000") os.environ.setdefault("SECRET_KEY", " *unique secret key* ") os.environ.setdefault("MONGO_URI", " *unique uri from mongo.db * ") os.environ.setdefault("MONGO_DB", " *database name* ")`
+
+The unique mongoDB url looks like this
+`mongodb+srv://username:password@clustername-qtxun.mongodb.net/databasename?retryWrites=true&w=majorit`
+
+The env.py file contains sensive information, it needs to be added to the '.gitignore' file.
+
+#### **Requirements.txt and Procfile**
+
+Heroku needs to know all the requirements files the app needed for running the app successfully.
+
+- In VScode terminal, use the following command to create a requirements.txt file.
+
+  `pip3 freeze --local > requirements.txt`
+
+- In VScode terminal, type `echo web: python app.py > Procfile` to create a Procifile.
+
+- The Procfile need to contain `web:python app.py` with no additional blank line after it.
+
+- Push these files to Github.
+
+#### **Connecting to GitHub**
+
+- From the heroku dashboard select "Deploy" tab
+- In "deployment method" section select "GitHub"
+- From the search bar just appeared enter your Github repository name
+- When your locate the relative repository, click"Connect"
+- Click the "setting" tab in the top bar
+- Click"Reveal Config Vars" in the "Config Vars" section
+- fill up the form use the following key/value pairs in the env.py file:
+- Go back to the "Deploy" tab and click "enable automatic deployment"
+- Uderneath, find "Manual Deploy", choose the master branch and click"Deploy Branch"
+- It may take a few minutes for the app to build, once it's done, click "Open App" from the top of the page
 
 ## **Credits**
 
