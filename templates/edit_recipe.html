@@ -23,14 +23,14 @@
         required
       >
         <option value="" disabled>Choose Category</option>
-        {% for category in categories %} {% if category.category_name ==
+        {% for category in categories %} {% if category._id ==
         recipe.category_name %}
-        <option value="{{ recipe.category_name }} selected">
-          {{-recipe.category_name-}}
+        <option value="{{-category.category_name-}}" selected>
+          {{-category.category_name-}}
         </option>
         {% else %}
-        <option value="{{ category.category_name }}">
-          {{-category.category_name-}}
+        <option value="{{-category.category_name-}}">
+          {{-category.category_name }}
         </option>
         {% endif%} {% endfor %}
       </select>
@@ -50,9 +50,9 @@
         name="smoothie_name"
         placeholder="Smoothie Name"
         type="text"
-        minlength="5"
-        maxlength="50"
-        value="{{ recipe.smoothie_name }}"
+        minlength="3"
+        maxlength="60"
+        value="{{-recipe.smoothie_name-}}"
         required
       />
     </div>
@@ -73,7 +73,7 @@
         minlength="5"
         maxlength="60"
         placeholder="Ingredient"
-        disabled
+        hidden
       />
       <button type="button" class="btn-small" id="add" onclick="createInput()">
         Add Ingredient
@@ -87,7 +87,7 @@
           minlength="5"
           maxlength="60"
           name="new-ingredient"
-          value="{{ ingredient }}"
+          value="{{-ingredient-}}"
           placeholder=" Ingredient"
           id="ingredient_{{loop.index}}"
           required
