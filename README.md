@@ -107,6 +107,7 @@ Considering the nature of Smoothies, ie. "fruit" "vegetables" "summer" "ice" "co
 Take from the above feeling, I decide to use below color palatte. ⬇️
 
 ![color palatte](static/documentation/MS3-palette.png)
+![color palatte](static/documentation/ms3-palette-2.png)
 
 **_Typography_**
 
@@ -148,7 +149,61 @@ All recipes are avaliable to all users, so that all users will get to taste what
 
 For smoothies, most people may not familiar with a specific name. The main ingredient or the main liquid is what people look at when it comes to searching. This feature will meet this particular user need.
 
+**_Slides diplayed on all recipes page to showcase various category of smoothies_**
+
+The slides show the users of different types of smoothies with a tagline explaining what the benefits are.
+
+**_Users can view full recipe_**
+
+Users can access the full recipe page and view the ingredients and method, smoothie category and the username of the recipe creator.
+
+**_Users account management_**
+
+- **Register** Users have the option to create an account.
+
+- **LogIn** registered users can access their account by logging in.
+
+- **LogOut** Once the user finished using the site, they have a option of logging out the website.
+
+**_Users Recipes management_**
+
+A registered user is able to upload their own recipes to the site. All access is shown on my recipes page.
+
+- Upload: users are asked to fill up a form to upload a recipe. The form is validated. It means that the user cannot leave any inputs blank and white spaces.
+
+- Edit: the user can edit their own recipes on my recipes page by hover over the recipe image and click on edit button. They will be shown the form their filled out when they created the recipe, they can make changes and save.
+
+- Delete: the user can delete their own recipes by clicking on the delete button when hovering over the recipe image. A confirmation message modal will pop up to confirm deletion.
+
+**_Pagiantion on all recipes and my recipes pages_**
+
+Pagination is used for all recipes and my recipes pages. It is useful for mobile devices, help reduce loading time. The database is relatively small at the moment, but it will get bigger as more and more users start to use it, it is very important feagure for this purpose.
+
+**_Admin manage categories functionality_**
+
+As a site owner, I can have the option to edit or delete the existing categories if I would like to.
+
 ### **Features Left to Implement**
+
+- **Calories calculation**
+
+  can be a nice feature for those who cautious about calorie gaining and weight management.
+
+- **Reviews**
+
+  allow users to leave a review, commenting what they think about the recipe will help other users deciding on whether or not to try the recipe.
+
+- **More secure user authetication system**
+
+  at the moment, the create account only build by username and password. The feature can be improved by adding email and comfrim passwording functionality.
+
+- **Ability to upload an image file**
+
+  by adding a image file instead of relying on a URL.
+
+- **Save Recipes**
+
+  the feature of saving a recipe to my account for future reference.
 
 ## **Technologies Used**
 
