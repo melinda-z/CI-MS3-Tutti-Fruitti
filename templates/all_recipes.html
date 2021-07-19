@@ -1,6 +1,7 @@
 {% extends "base.html" %} {% block content %}
 <section class="recipe-header">
   <!-- materilize  slider -->
+  <!-- https://materializecss.com/carousel.html -->
   <div class="slider">
     <ul class="slides">
       <li>
@@ -100,6 +101,8 @@
   {% endif%}
 </section>
 <!-- pagination -->
+<!-- https://gist.github.com/mozillazg/69fb40067ae6d80386e10e105e6803c9 -->
+<!-- https://stackoverflow.com/questions/27992413/how-do-i-calculate-the-offsets-for-pagination/27992616 -->
 <section class="pagination">
   <div class="row">
     <div class="col s12 center-align">{{ pagination.links }}</div>

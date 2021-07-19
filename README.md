@@ -10,7 +10,10 @@ Code Institute Milestone Project 3, Data-centric Module
   - [Target Audience](#target-audience)
   - [User Stories](#user-stories)
   - [Design](#design)
-  - [Wireframe](#wireframe)
+  - [Wireframe & Mockups](#wireframe&mockups)
+    - [Mock-up](#mock-up)
+    - [Wireframes](#wireframes)
+    - [Database Schema](#database-schema)
 - [Features](#Features)
   - [Existing Features](#existing-features)
   - [Features Left to Implement](#features-left-to-implement)
@@ -387,9 +390,53 @@ Heroku needs to know all the requirements files the app needed for running the a
 - Uderneath, find "Manual Deploy", choose the master branch and click"Deploy Branch"
 - It may take a few minutes for the app to build, once it's done, click "Open App" from the top of the page
 
+### **Forking the Repository**
+
+- Log into Github and locate the Github repository
+- At the top right corner of the repository, there is a button reads "Fork"
+- Once click on the button, you will have a copy of the original repository in your own Github account.
+
+### **Local Clone**
+
+- Log into Github
+- Locate the repository
+- Under the main navbar there is a button "code" beside the green "Gitpod" button
+- Click on "Code" button, you can see the URL of the repository
+- Click on the clipboard icon to copy the URL
+- Open your local terminal
+- Change the current working directory to the location where you want to clone the repository
+- Type in CLI the command `git clone`and paste the URL you just copied. It should look like this:
+  `$ git clone https://github.com/MelindaZhang2020/CI-MS3-Tutti-Fruitti`
+- press enter to create you local clone
+
+Alternatively
+
+- Inside the "code" button, at the buttom click "Download ZIP"
+- A zip file will download into you download folder on your device
+- Double click on the zip file, it will unzip it for you
+- Now you have all the files of the project
+
+NB: In order to work with a clone of this project, you will need to create your own env.py file using your own variables and create your own mongoDB database matching the schema in the [Database Schema](#database-schema) section.
+
 ## **Credits**
 
 ### **Content**
+
+#### _Code_
+
+- The main structure code has been written followed [Code institute task manager mini project](https://learn.codeinstitute.net/)
+- Landing page [neon font] code taken from [code pen](https://codepen.io/FelixRilling/pen/qzfoc)
+- Landing page grid images code taken from [W3schools](https://www.w3schools.com/howto/howto_css_image_grid_responsive.asp)
+- All recipes page slider taken from [Materialize](https://materializecss.com/carousel.html)
+- Recipe display image overlay code taken from [W3schools](https://www.w3schools.com/howto/howto_css_image_overlay_icon.asp)
+- Pagination code was taken from [Github](https://gist.github.com/mozillazg/69fb40067ae6d80386e10e105e6803c9) and [Stack overflow](https://stackoverflow.com/questions/27992413/how-do-i-calculate-the-offsets-for-pagination/27992616)
+- Full recipe page go back button code was taken from [W3schools](https://www.w3schools.com/jsref/met_his_back.asp)
+- My recipes & manage categories page delete confirmation message modal code was take from [W3schools](https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_delete_modal)
+- Materialize form validation issue solving code was take from [code institute lecture source code](https://github.com/Code-Institute-Solutions/TaskManagerAuth/tree/main/04-AddingATask-WritingToTheDatabase/02-materialize-select-validation)
+
+#### _Recipes_
+
+All testing recipes are taken from [BBC good food](https://www.bbcgoodfood.com/recipes/collection/smoothie-recipes), [eatthis, notthat!](https://www.eatthis.com/weight-loss-smoothies/) and [allrecipes](http://allrecipes.co.uk/recipes/tag-205/smoothie-recipes.aspx)
 
 ### **Media**
 
