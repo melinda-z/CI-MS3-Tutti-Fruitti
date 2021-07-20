@@ -72,6 +72,26 @@ After validating all codes, I ran the site through Chrome LightHouse. The initia
 
 ![LightHouse Report](static/documentation/lighthouse-report1.png)
 
-Taking the feedback into account, I have looked into the recommedations and will bear it in mind for future project.
+Taking the feedback into account, I have looked into the recommedations and improved the code:
+
+### **Performance**
+
+- Reduced some image size
+
+### **Accessibility**
+
+- Changed footer content color for a sufficient contrast ratio
+
+- Made sure heading element in descending order
+
+- Add alt attribute to all `img` element
+
+### **SEO**
+
+- Add meta description and http-equiv
+
+All of the above changes brought up the score. Although there are still many area to be improve, I am happy with the score for now, and will bare in mind with all the recommendations for future references.
+
+![lighthouse-report-improve](static/documentation/lighthouse-report-improve.png)
 
 ## **Testing for user stories**
