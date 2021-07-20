@@ -95,3 +95,88 @@ All of the above changes brought up the score. Although there are still many are
 ![lighthouse-report-improve](static/documentation/lighthouse-report-improve.png)
 
 ## **Testing for user stories**
+
+As a general user:
+
+- I want to be able to see recipes without having to register an account.
+
+![testing-user-story1](static/documentation/testing-user-story1.png)
+
+Without register an account, users can browse recipes casually.⬆️
+
+- I want to be able to search recipe with certain ingredients.
+
+- I want to search by specific categories, ie. detox, kids friendly, weight loss etc.
+
+![testing-user-story2](static/documentation/testing-user-story2.png)
+
+Users are able to search recipes by entering ingredients keyword.⬆️
+
+- I want to be able to share my recipe with other people.
+
+![testing-user-story3](static/documentation/testing-user-story3.png)
+
+Once the user create an account, they can upload their own recipes to share with the community.⬆️
+
+- I want to have an account so I can come back, add, edit or delete my recipe.
+
+![testing-user-story4](static/documentation/testing-user-story4.png)
+
+There is an option to create an account, once that is done, the user can come back upload, edit or delete recipes of their own.⬆️
+
+As a first time user:
+
+- I want to know what the website is about.
+
+![testing-user-story5](static/documentation/testing-user-story5.png)
+
+The headline and benefits cards gives the first time visitor an idea what the website is about.⬆️
+
+- I want to have a little taste about how the recipe looks like, is it something I am looking for.
+
+- I want to explore around to get to know the place.
+
+![testing-user-story6](static/documentation/testing-user-story6.png)
+
+The users would be able to click "view recipe" see for format of a full recipe.⬆️
+
+As a returning user:
+
+- I want to be able to log into my accout.
+
+![testing-user-story7](static/documentation/testing-user-story7.png)
+
+- I want to add recipe to pre-determined categories.
+
+- I want to have access to the recipe I uploaded.
+
+- I want to be able to edit or delete my own recipe anytime if I want to.
+  ![testing-user-story9](static/documentation/testing-user-story9.png)
+  ![testing-user-story8](static/documentation/testing-user-story8.png)
+  ![testing-user-story10](static/documentation/testing-user-story10.png)
+  ![testing-user-story11](static/documentation/testing-user-story11.png)
+
+The users are able to upload, edit or delete their own recipes.⬆️
+
+As the site owner/admin:
+
+- I want to be able to add new categories to the site.
+
+![testing-user-story12](static/documentation/testing-user-story12.png)
+
+Admin can manage the smoothies categoies.⬆️
+
+- I want the new category to be added and displayed as a certain way to go with the flow of the entire site.
+
+- I want to be able to edit the pre-existing categories.
+
+- I want to be able to delete any categories.
+
+![testing-user-story13](static/documentation/testing-user-story13.png)
+![testing-user-story14](static/documentation/testing-user-story14.png)
+![testing-user-story15](static/documentation/testing-user-story15.png)
+![testing-user-story16](static/documentation/testing-user-story16.png)
+
+The above images shows those functionalities. ⬆️
+
+## **Manually Testing**
