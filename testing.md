@@ -58,8 +58,16 @@ The same issue for the creatInput function, it has been called in HTML code. See
 
 ### **Python**
 
-I checked my app.py file using [PEP8 online], errors shows below ⬇️
+I checked my app.py file using [PEP8 online](http://pep8online.com/checkresult), errors shows below ⬇️
 
 ![py-error](static/documentation/py-error.png)
 
 In order to fix the errors, I had to disable Pylance.
+
+## **LightHouse Testing**
+
+After validating all codes, I ran the site through Chrome LightHouse. The initial scores were below: ⬇️
+
+![LightHouse Report](static/documentation/lighthouse-report1.png)
+
+Taking the feedback into account, I have looked into the recommedations and will bear it in mind for future project.
