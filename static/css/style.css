@@ -58,7 +58,7 @@ nav .nav-wrapper {
 }
 #sidenav-title {
   font-size: 2rem;
-  padding: 20px;
+  color: #ff9900;
 }
 .text-shadow {
   text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
@@ -81,8 +81,8 @@ p:nth-child(1) span {
   font-size: 4rem;
 }
 p:nth-child(1) span:hover {
-  -webkit-animation: neon4 1.5s ease-in-out infinite alternate;
-  -moz-animation: neon4 1.5s ease-in-out infinite alternate;
+  animation: neon4 1.5s ease-in-out infinite alternate;
+  animation: neon4 1.5s ease-in-out infinite alternate;
   animation: neon4 1.5s ease-in-out infinite alternate;
 }
 p span:hover {
@@ -114,7 +114,7 @@ p span:hover {
   margin: 20px;
 }
 .sub-title {
-  margin-block: 5rem;
+  margin: 5rem;
 }
 
 #home-btn {
@@ -269,7 +269,7 @@ lays on top of the container and over the image */
 .flex-wrapper {
   display: flex;
   margin: 30px;
-  word-break: break-word;
+  word-break: break-all;
 }
 .recipe-img {
   width: 20vw;
