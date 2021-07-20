@@ -245,10 +245,11 @@ lays on top of the container and over the image */
 }
 
 /* ADD RECIPE PAGE */
-::placeholder {
-  color: #000;
+::placeholder,
+input#image_url,
+input.select-dropdown {
+  color: #9a8c98;
 }
-
 .add-btn {
   position: absolute;
   margin-left: 60%;
