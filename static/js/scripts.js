@@ -75,7 +75,7 @@ $(document).ready(function () {
 });
 
 // Add ingredient input functionality
-const input = document.getElementById("new-ingredient");
+
 const ingredientList = document.getElementById("ingredients-list");
 
 // create another input field after adding one ingredient
