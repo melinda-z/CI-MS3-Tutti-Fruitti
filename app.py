@@ -1,5 +1,6 @@
 import os
-from flask import Flask, flash, render_template, redirect, request, session, url_for
+from flask import (
+    Flask, flash, render_template, redirect, request, session, url_for)
 from flask_pymongo import PyMongo
 from bson.objectid import ObjectId
 from werkzeug.security import generate_password_hash, check_password_hash
@@ -19,6 +20,8 @@ app.config["SECRET_KEY"] = os.environ.get("SECRET_KEY")
 mongo = PyMongo(app)
 
 # HOME PAGE
+
+
 @app.route("/")
 def home():
     """
@@ -44,14 +47,16 @@ def paginate(recipes):
     )
     offset = page * PER_PAGE - PER_PAGE
 
-    return recipes[offset : offset + PER_PAGE]
+    return recipes[offset: offset + PER_PAGE]
 
 
 def pagination_args(recipes):
     """
     Get and display the total number of pages
     """
-    page, _, _ = get_page_args(page_parameter="page", per_page_parameter="per_page")
+    page, _, _ = get_page_args(
+        page_parameter="page", per_page_parameter="per_page")
+
     total = len(recipes)
 
     return Pagination(page=page, per_page=PER_PAGE, total=total)
@@ -104,7 +109,8 @@ def full_recipe(recipe_id):
     try:
         # assign _id with relative key name
         recipe = mongo.db.recipes.find_one({"_id": ObjectId(recipe_id)})
-        category = mongo.db.categories.find_one({"_id": recipe["category_name"]})
+        category = mongo.db.categories.find_one(
+            {"_id": recipe["category_name"]})
         user = mongo.db.users.find_one({"_id": recipe["created_by"]})
         # reassign key name to readable category & user name
         recipe["category_name"] = category["category_name"]
@@ -166,10 +172,10 @@ def log_in():
                 session["user"] = request.form.get("username").lower()
                 flash(
                     "You are successfully logged in, {}!".format(
-                        request.form.get("username").capitalize()
-                    )
+                        request.form.get("username").capitalize())
                 )
-                return redirect(url_for("my_recipes", username=session["user"]))
+                return redirect(url_for(
+                    "my_recipes", username=session["user"]))
 
             else:
                 # invalid password match
@@ -192,10 +198,12 @@ def my_recipes(username):
     Upload recipe access
     """
     # grab the session user's username from db
-    username = mongo.db.users.find_one({"username": session["user"]})["username"]
+    username = mongo.db.users.find_one(
+        {"username": session["user"]})["username"]
     # only display recipes created by current user
     user = mongo.db.users.find_one({"username": session["user"]})
-    recipes = list(mongo.db.recipes.find({"created_by": ObjectId(user["_id"])}))
+    recipes = list(mongo.db.recipes.find(
+        {"created_by": ObjectId(user["_id"])}))
 
     # Pagination
     paginated_recipes = paginate(recipes)
@@ -274,13 +282,15 @@ def edit_recipe(recipe_id):
             "created_by": ObjectId(user["_id"]),
         }
 
-        mongo.db.recipes.update({"_id": ObjectId(recipe_id)}, update_recipe)
+        mongo.db.recipes.update(
+            {"_id": ObjectId(recipe_id)}, update_recipe)
         flash("Recipe Successfully Updated")
         return redirect(url_for("my_recipes", username=session["user"]))
 
     recipe = mongo.db.recipes.find_one({"_id": ObjectId(recipe_id)})
     categories = mongo.db.categories.find().sort("category_name", 1)
-    return render_template("edit_recipe.html", recipe=recipe, categories=categories)
+    return render_template(
+        "edit_recipe.html", recipe=recipe, categories=categories)
 
 
 # Allow recipe loader to delete recipe function
@@ -375,6 +385,6 @@ def internal_server_error(e):
     """
     return render_template("errors/500.html"), 500
 
-
 if __name__ == "__main__":
-    app.run(host=os.environ.get("IP"), port=int(os.environ.get("PORT")), debug=True)
+    app.run(host=os.environ.get("IP"), port=int(
+        os.environ.get("PORT")), debug=True)

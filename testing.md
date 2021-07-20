@@ -55,3 +55,11 @@ The "goBack" function are used in HTML as onlick method. See below ⬇️
 The same issue for the creatInput function, it has been called in HTML code. See below ⬇️
 
 ![js-error-explained](static/documentation/js-error-explained1.png)
+
+### **Python**
+
+I checked my app.py file using [PEP8 online], errors shows below ⬇️
+
+![py-error](static/documentation/py-error.png)
+
+In order to fix the errors, I had to disable Pylance.
