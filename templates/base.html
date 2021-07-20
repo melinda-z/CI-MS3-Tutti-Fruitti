@@ -79,13 +79,14 @@
       </nav>
       <!-- mobile sidenav -->
       <ul class="sidenav" id="mobile-demo">
-        <a
-          id="sidenav-title"
-          class="center-align"
-          href="{{ url_for('home') }}"
-          class="brand-logo"
-          >Tutti Fruitti</a
-        >
+        <li>
+          <a
+            id="sidenav-title"
+            href="{{ url_for('home') }}"
+            class="brand-logo center-align"
+            >Tutti Fruitti</a
+          >
+        </li>
         <li><a href="{{ url_for('home') }}">Home</a></li>
         <li><a href="{{ url_for('all_recipes') }}">Recipes</a></li>
         {% if session.user %}
