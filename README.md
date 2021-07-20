@@ -2,9 +2,11 @@
 
 Code Institute Milestone Project 3, Data-centric Module
 
+![Am I Responsive](static/documentation/Am-I-responsive.png)
+
 ## **Table of Contents**
 
-- [About](#About)
+- [About](#about)
 - [Users Experience(UX)](<#users-experience(ux)>)
   - [Project Goals](#project-goals)
   - [Target Audience](#target-audience)
@@ -32,8 +34,6 @@ Tutti Fruitti is a place for smoothies recipes.
 It is a platform for smoothies lovers to explore and share smoothies recipes with one another. The users also have the the option of hoding an account, there they can add, edit and delete the their own recipes.
 
 A live website can be found [here](https://tutti-fruitti.herokuapp.com/).
-
-![Am I Responsive](static/documentation/am-i-responsive.png)
 
 ## **Users Experience (UX)**
 
@@ -436,8 +436,26 @@ NB: In order to work with a clone of this project, you will need to create your 
 
 #### _Recipes_
 
-All testing recipes are taken from [BBC good food](https://www.bbcgoodfood.com/recipes/collection/smoothie-recipes), [eatthis, notthat!](https://www.eatthis.com/weight-loss-smoothies/) and [allrecipes](http://allrecipes.co.uk/recipes/tag-205/smoothie-recipes.aspx)
+All testing recipes are taken from [BBC good food](https://www.bbcgoodfood.com/recipes/collection/smoothie-recipes), [eatthisnotthat!](https://www.eatthis.com/weight-loss-smoothies/) and [allrecipes](http://allrecipes.co.uk/recipes/tag-205/smoothie-recipes.aspx)
 
 ### **Media**
 
+- Landing page images are downloaded from [shutterstock](https://www.shutterstock.com/home)
+
+- All smoothies images in all recipes pages represent each category are downloaded from[unsplash](https://unsplash.com/)
+
+- Logo icon, favicon and all the icons in create recipe form are downloaded from [ICON8](https://icons8.com/)
+
 ### **Acknowledgements**
+
+I would like to thank:
+
+- My mentor Antonio Rodriguez for his patience generosity with his times.
+
+- Help and support from fellow students in the Slack community.
+
+- Tutor support and student care team.
+
+- My boyfriend Kevin Hurley's support and help with testing and encouragement.
+
+Should you have any queries please reach me on melinda_hongye@yahoo.com

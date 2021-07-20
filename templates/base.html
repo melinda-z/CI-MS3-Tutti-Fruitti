@@ -79,9 +79,9 @@
       </nav>
       <!-- mobile sidenav -->
       <ul class="sidenav" id="mobile-demo">
-        <h4 class="center-align">
+        <span id="sidenav-title" class="center-align">
           <a href="{{ url_for('home') }}" class="brand-logo">Tutti Fruitti</a>
-        </h4>
+        </span>
         <li><a href="{{ url_for('home') }}">Home</a></li>
         <li><a href="{{ url_for('all_recipes') }}">Recipes</a></li>
         {% if session.user %}
