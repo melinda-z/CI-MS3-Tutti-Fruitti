@@ -7,22 +7,22 @@ Code Institute Milestone Project 3, Data-centric Module
 ## **Table of Contents**
 
 - [About](#about)
-- [Users Experience(UX)](<#users-experience(ux)>)
+- [Users Experience](#users-experience)
   - [Project Goals](#project-goals)
   - [Target Audience](#target-audience)
-  - [User Stories](#user-stories)
+  - [Users Stories](#users-stories)
   - [Design](#design)
-  - [Wireframe & Mockups](#wireframe&mockups)
-    - [Mock-up](#mock-up)
+  - [Wireframes and Mockups](#wireframes-and-mockups)
+    - [Mockups](#mockups)
     - [Wireframes](#wireframes)
     - [Database Schema](#database-schema)
-- [Features](#Features)
+- [Features](#features)
   - [Existing Features](#existing-features)
   - [Features Left to Implement](#features-left-to-implement)
-- [Technologies-Used](#Technologies-Used)
-- [Testing](#Testing)
-- [Deployment](#Deployment)
-- [Credit](#Credit)
+- [Technologies Used](#technologies-used)
+- [Testing](#testing)
+- [Deployment](#deployment)
+- [Credits](#credits)
   - [Content](#content)
   - [Media](#media)
   - [Acknowledgements](#acknowledgements)
@@ -35,7 +35,7 @@ It is a platform for smoothies lovers to explore and share smoothies recipes wit
 
 A live website can be found [here](https://tutti-fruitti.herokuapp.com/).
 
-## **Users Experience (UX)**
+## **Users Experience**
 
 ### **Project Goals**
 
@@ -45,7 +45,7 @@ The project goal is to provide a platform for users who love smoothies to explor
 
 Our target audience are anyone who interested in healthy living, who enjoys fruit and veg, or just simply exploring new experiences.
 
-### **Uers Stories**
+### **Users Stories**
 
 **_General User Goals_**
 
@@ -118,19 +118,19 @@ Take from the above feeling, I decide to use below color palatte. ⬇️
 
 Imagery is the soul of a website, it plays an very important role of user experience. It should be nice and clear, illustrating the site and recipes. The color scheme of the images should interact with the main color scheme.
 
-### **Wireframes & Mockups**
+### **Wireframes and Mockups**
 
-**_Mockups_**
+#### **_Mockups_**
 
 The initial plan of this project is to use a bootstap template, but as the development progress, it turned out a bit messy. So I decided to ditch the original plan and start it again. You can see a photo or a hand-drawing mockup below. ⬇️
 
 ![mock-up](static/documentation/ms3-mockup.png)
 
-**_Wireframes_**
+#### **_Wireframes_**
 
 All wireframes were designed base on mobile first principle, along side with a tablet and destop view. You can see all wireframes [here](static/documentation/wireframes.md).
 
-**_Database Schema_**
+#### **_Database Schema_**
 
 ![Database Schema](static/documentation/ms3-database-schema.png)
 
@@ -455,7 +455,5 @@ I would like to thank:
 - Help and support from fellow students in the Slack community.
 
 - Tutor support and student care team.
-
-- My boyfriend Kevin Hurley's support and help with testing and encouragement.
 
 Should you have any queries please reach me on melinda_hongye@yahoo.com
