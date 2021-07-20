@@ -442,7 +442,7 @@ All testing recipes are taken from [BBC good food](https://www.bbcgoodfood.com/r
 
 - Landing page images are downloaded from [shutterstock](https://www.shutterstock.com/home)
 
-- All smoothies images in all recipes pages represent each category are downloaded from[unsplash](https://unsplash.com/)
+- All smoothies images in all recipes pages represent each category are downloaded from [unsplash](https://unsplash.com/)
 
 - Logo icon, favicon and all the icons in create recipe form are downloaded from [ICON8](https://icons8.com/)
 
@@ -450,7 +450,7 @@ All testing recipes are taken from [BBC good food](https://www.bbcgoodfood.com/r
 
 I would like to thank:
 
-- My mentor Antonio Rodriguez for his patience generosity with his times.
+- My mentor Antonio Rodriguez for his patience and generosity with his times.
 
 - Help and support from fellow students in the Slack community.
 

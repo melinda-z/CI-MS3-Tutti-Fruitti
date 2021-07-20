@@ -23,7 +23,9 @@ I got the following errors :
 I fixed this error by replace the `<span>` element with li, and add custom css to style it.
 
 ![error2](static/documentation/html-error2.png)
+
 I fixed this error by adding an alt attribute to all `<img>` element.
+
 ![error3](static/documentation/html-error3.png)
 
 This is an error due to Jinjia templates, the loop caused duplicated id.
@@ -71,3 +73,5 @@ After validating all codes, I ran the site through Chrome LightHouse. The initia
 ![LightHouse Report](static/documentation/lighthouse-report1.png)
 
 Taking the feedback into account, I have looked into the recommedations and will bear it in mind for future project.
+
+## **Testing for user stories**
