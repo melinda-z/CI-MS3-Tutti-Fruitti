@@ -301,6 +301,14 @@ As a site owner, I can have the option to edit or delete the existing categories
 
   - W3C CSS Validation Service has been used to test the CSS codes.
 
+- [JSHint](https://jshint.com/)
+
+  - JSHint has been used for checking Javascript code.
+
+- [PEP8 Online](http://pep8online.com/)
+
+  - PEP8 Online used for checking python code meets PEP8 requirements.
+
 - [tinypng.com](https://tinypng.com/)
 
   - tinypng.com has been used to compress large images.
