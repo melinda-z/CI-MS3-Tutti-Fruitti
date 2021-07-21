@@ -229,3 +229,67 @@ The above images shows those functionalities. ⬆️
 ### **edit_category.html**
 
 ![testing-full-recipe](static/documentation/testing/testing-edit-category.png)
+
+## **Responsiveness Testing**
+
+The website was tested on a variety of devices:
+
+- MacBook Air
+
+- Dell laptop
+
+- Sumsung Galaxy tab A10.1
+
+- Sumsung Galaxy S10
+
+- Huawei P10
+
+- Sumsung A125F
+
+- Iphone 5
+
+The website was viewed by different browsers:
+
+- Google Chrome
+
+- Mozilla Firefox
+
+- Opera
+
+- Microsoft Edge
+
+- Safari
+
+Responsive Viewer
+
+![mobolie-view](static/documentation/testing/responsive-mobile.png)
+
+![medium-screen](static/documentation/testing/responsive-medium.png)
+
+![large-screem](static/documentation/testing/responsive-large.png)
+
+## **Bugs and solutions**
+
+### **Edit Recipe Issue**
+
+During testing I encountered an issue with editing the recipe. When I was in the editing page, cilck update button when make no changes, all the recipe ingredients and method will be wipped out returns blank.
+
+It was caused by the `name`attribute have a blank space. With the ingredients input fields I didn't give `name` attribute to all the input fields either.
+
+### **Delete Recipe/Category Issue**
+
+When delete a recipe, it didn't matter which recipe delete button I clicked, it always deletes the first recipe on the page.
+
+It was caused by the loop through of the confrim deletion modal.
+
+I fixed this bug with give a looping `id` to the modal and delete button, see the code below.⬇️ but because of the looping `id`, I couln't style it in style sheet, so instead, I did it in Html with the `style` attribute.
+
+![testing-bug](static/documentation/testing/testing-bug.png)
+
+The same happened with delete category function, I fixed it with the same approach.
+
+### **Edit Recipe Category won't display**
+
+When I testing edit recipe function, the smoothie category were't display accordingly. Instead showing the correct category, it always shows the first category in the database.
+
+I know it was the data wasn't bonding correctly in the html page. It was because I used `ObjectId` method for category name. I changed the code to `{% if category._id == recipe.category_name %}`, and that solved the problem.
