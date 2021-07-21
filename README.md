@@ -2,12 +2,16 @@
 
 Code Institute Milestone Project 3, Data-centric Module
 
+Tutti Fruitti is a place for smoothies recipes.
+
+It is a platform for smoothies lovers to explore and share smoothies recipes with one another. The users also have the the option of hoding an account, there they can add, edit and delete the their own recipes.
+
 ![Am I Responsive](static/documentation/Am-I-responsive.png)
+
 A live website can be found [here](https://tutti-fruitti.herokuapp.com/).⬅️
 
 ## **Table of Contents**
 
-- [About](#about)
 - [Users Experience](#users-experience)
   - [Project Goals](#project-goals)
   - [Target Audience](#target-audience)
@@ -27,12 +31,6 @@ A live website can be found [here](https://tutti-fruitti.herokuapp.com/).⬅️
   - [Content](#content)
   - [Media](#media)
   - [Acknowledgements](#acknowledgements)
-
-## **About**
-
-Tutti Fruitti is a place for smoothies recipes.
-
-It is a platform for smoothies lovers to explore and share smoothies recipes with one another. The users also have the the option of hoding an account, there they can add, edit and delete the their own recipes.
 
 ## **Users Experience**
 

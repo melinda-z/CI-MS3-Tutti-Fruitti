@@ -2,8 +2,7 @@
 <!-- header section -->
 <section>
   <!-- flash message holder -->
-  <h3 class="center-align">Welcome back {{ username.capitalize() }}!</h3>
-  <h4 class="center-align">My Recipes</h4>
+  <h4 class="center-align">{{ username.capitalize() }}'s Recipes</h4>
   <!-- upload recipe button -->
   <div class="add_recipe center-align">
     <a class="waves-effect waves-light btn" href="{{ url_for('add_recipe') }}"

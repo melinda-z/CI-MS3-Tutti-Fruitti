@@ -171,7 +171,7 @@ def log_in():
             ):
                 session["user"] = request.form.get("username").lower()
                 flash(
-                    "You are successfully logged in, {}!".format(
+                    "You are successfully logged in {}, Welcome back!".format(
                         request.form.get("username").capitalize())
                 )
                 return redirect(url_for(
