@@ -205,3 +205,27 @@ The above images shows those functionalities. ⬆️
 ### **my_recipes.html**
 
 ![testing-my-recipes](static/documentation/testing/testing-my-recipes.png)
+
+### **add_recipe.html**
+
+![testing-add-recipe](static/documentation/testing/testing-add-recipe.png)
+
+### **edit_recipe.html**
+
+![testing-edit-recipe](static/documentation/testing/testing-edit-recipe.png)
+
+### **full_recipe.html**
+
+![testing-full-recipe](static/documentation/testing/testing-full-recipe.png)
+
+### **categories.html**
+
+![testing-full-recipe](static/documentation/testing/testing-categories.png)
+
+### **add_category.html**
+
+![testing-full-recipe](static/documentation/testing/testing-add-category.png)
+
+### **edit_category.html**
+
+![testing-full-recipe](static/documentation/testing/testing-edit-category.png)
