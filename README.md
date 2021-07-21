@@ -430,7 +430,7 @@ NB: In order to work with a clone of this project, you will need to create your 
 #### _Code_
 
 - The main structure code has been written followed [Code institute task manager mini project](https://learn.codeinstitute.net/)
-- Landing page [neon font] code taken from [code pen](https://codepen.io/FelixRilling/pen/qzfoc)
+- Landing page **neon font** code taken from [code pen](https://codepen.io/FelixRilling/pen/qzfoc)
 - Landing page grid images code taken from [W3schools](https://www.w3schools.com/howto/howto_css_image_grid_responsive.asp)
 - All recipes page slider taken from [Materialize](https://materializecss.com/carousel.html)
 - Recipe display image overlay code taken from [W3schools](https://www.w3schools.com/howto/howto_css_image_overlay_icon.asp)
