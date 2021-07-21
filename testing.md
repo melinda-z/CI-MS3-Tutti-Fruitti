@@ -181,3 +181,27 @@ Admin can manage the smoothies categoies.⬆️
 The above images shows those functionalities. ⬆️
 
 ## **Manually Testing**
+
+### **base.html**
+
+![testing-base](static/documentation/testing/testing-base.png)
+
+### **home.html**
+
+![testing-home](static/documentation/testing/testing-home.png)
+
+### **all_recipes.html**
+
+![testing-all-recipes](static/documentation/testing/testing-all-recipes.png)
+
+### **register.html**
+
+![testing-register](static/documentation/testing/testing-register.png)
+
+### **log_in.html**
+
+![testing-log-in](static/documentation/testing/testing-log-in.png)
+
+### **my_recipes.html**
+
+![testing-my-recipes](static/documentation/testing/testing-my-recipes.png)
